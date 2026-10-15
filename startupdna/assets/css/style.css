@@ -124,15 +124,10 @@ h4 { font-size: 20px; letter-spacing: 0.02em; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 20px; }
 
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-.brand .logo,
-.logo-badge {
+.brand .logo {
   width: 52px; height: 52px; flex: none;
   border-radius: 50%; object-fit: cover; aspect-ratio: 1 / 1;
   background: var(--blue);
-}
-.logo-badge {
-  width: 168px; height: 168px;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.22), var(--shadow-blue);
 }
 .brand .brand-word {
   font-family: var(--font-display); font-weight: 800; text-transform: uppercase; line-height: 0.88;
@@ -482,13 +477,9 @@ form.form { display: grid; gap: 14px; }
 .breadcrumb a:hover { color: #fff; }
 
 .page-head { position: relative; overflow: hidden; padding: clamp(48px, 7vw, 96px) 0 clamp(32px, 5vw, 56px); }
-.page-head-inner { display: grid; grid-template-columns: 1fr auto; gap: clamp(20px, 4vw, 48px); align-items: center; }
+.page-head-inner { max-width: var(--max); }
 .page-head h1 { color: #fff; font-size: clamp(44px, 7vw, 92px); }
 .page-head h1 .accent { display: block; }
-@media (max-width: 700px) {
-  .page-head-inner { grid-template-columns: 1fr; }
-  .page-head .logo-badge { width: 120px; height: 120px; }
-}
 
 .helix-divider { height: 6px; background: var(--orange); }
 

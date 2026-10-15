@@ -233,12 +233,9 @@ function pageHead(root, { eyebrow, titleHtml, lede }) {
 <section class="page-head on-blue">
   <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true">
   <div class="wrap page-head-inner">
-    <div>
-      <p class="eyebrow on-dark">${eyebrow}</p>
-      <h1>${titleHtml}</h1>
-      <p class="lede">${lede}</p>
-    </div>
-    ${logoMark(root, { className: "logo-badge", size: 168, alt: site.name })}
+    <p class="eyebrow on-dark">${eyebrow}</p>
+    <h1>${titleHtml}</h1>
+    <p class="lede">${lede}</p>
   </div>
 </section>`;
 }
