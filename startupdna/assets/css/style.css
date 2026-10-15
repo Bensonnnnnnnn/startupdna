@@ -184,7 +184,7 @@ h4 { font-size: 20px; letter-spacing: 0.02em; }
 
 /* Hero ------------------------------------------------------------------- */
 
-.hero { position: relative; overflow: hidden; padding: clamp(24px, 3.5vw, 48px) 0 clamp(48px, 7vw, 88px); }
+.hero { position: relative; overflow: hidden; padding: clamp(64px, 9vw, 130px) 0 clamp(64px, 8vw, 110px); }
 .hero .helix,
 .founder-hero .helix {
   position: absolute; right: -4vw; top: -18%; height: 140%; width: auto;
@@ -195,7 +195,7 @@ h4 { font-size: 20px; letter-spacing: 0.02em; }
   .hero .helix,
   .founder-hero .helix { display: none; }
 }
-.hero .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.hero .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
 .hero h1 { color: #fff; margin-bottom: 0.3em; }
 .hero h1 .accent { color: var(--orange); display: block; }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
@@ -461,6 +461,16 @@ form.form { display: grid; gap: 14px; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .site-footer a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 15px; }
 .site-footer a:hover { color: var(--orange); }
+.site-footer .social-row a {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #fff;
+}
+.site-footer .social-row a:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: transparent;
+}
 .site-footer .bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,0.55); }
 @media (max-width: 900px) { .site-footer .top { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .site-footer .top { grid-template-columns: 1fr; } }
