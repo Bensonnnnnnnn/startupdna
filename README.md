@@ -51,7 +51,18 @@ Then run `node build.js` again.
 
 ## Brand assets
 
-[`assets/img/logo.svg`](assets/img/logo.svg) is a recreation of the circular badge (blue field, “STARTUP DNA”, helix). Swap it for the official file when you have it. Do not redistribute YouTube thumbnails as original artwork; they are loaded from YouTube’s CDN at runtime.
+The official mark is the circular badge: electric blue field (`#3036FC`), white condensed **STARTUP / DNA** wordmark, and yellow → orange sequencer bars.
+
+| File | Use |
+| --- | --- |
+| [`assets/img/logo.png`](assets/img/logo.png) | Primary on-page mark (tight circular crop, transparent corners) |
+| [`assets/img/logo.svg`](assets/img/logo.svg) | Vector companion / SVG favicon |
+| [`assets/img/favicon.png`](assets/img/favicon.png) | 32×32 tab icon |
+| [`assets/img/apple-touch-icon.png`](assets/img/apple-touch-icon.png) | 180×180 home-screen icon |
+| [`assets/img/helix.svg`](assets/img/helix.svg) | Decorative sequencer-bar motif (not the brand mark) |
+| [`assets/img/logo-source.jpg`](assets/img/logo-source.jpg) | Source artwork |
+
+Do not redistribute YouTube thumbnails as original artwork; they are loaded from YouTube’s CDN at runtime.
 
 ## Pages
 

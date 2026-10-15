@@ -1,18 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Startup DNA">
-  <defs>
-    <style>
-      .w { font-family: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif; font-weight: 800; fill: #fff; letter-spacing: 1px; }
-    </style>
-  </defs>
-  <circle cx="100" cy="100" r="100" fill="#2e3bff"/>
-  <text class="w" x="100" y="94" font-size="46" text-anchor="middle">STARTUP</text>
-  <text class="w" x="68" y="140" font-size="46" text-anchor="middle">DNA</text>
-  <!-- helix glyph -->
-  <g transform="translate(118 112)" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round">
-    <path d="M4 2 C 14 2, 26 14, 36 14 S 58 2, 68 2"/>
-    <path d="M4 30 C 14 30, 26 18, 36 18 S 58 30, 68 30"/>
-    <line x1="16" y1="6" x2="16" y2="26"/>
-    <line x1="36" y1="14" x2="36" y2="18"/>
-    <line x1="56" y1="6" x2="56" y2="26"/>
+  <!-- Vector companion to assets/img/logo.png (the official circular mark). -->
+  <circle cx="100" cy="100" r="100" fill="#3036FC"/>
+  <text x="24" y="94" fill="#fff" font-family="Barlow Condensed, Arial Narrow, Impact, sans-serif" font-weight="800" font-size="38" letter-spacing="0.5">STARTUP</text>
+  <text x="24" y="138" fill="#fff" font-family="Barlow Condensed, Arial Narrow, Impact, sans-serif" font-weight="800" font-size="38" letter-spacing="0.5">DNA</text>
+  <!-- Sequencer / electrophoresis bars: yellow → orange -->
+  <g stroke-linecap="round" fill="none">
+    <g stroke="#F4EC4A" stroke-width="3.4">
+      <line x1="108" y1="114" x2="108" y2="144"/><circle cx="108" cy="114" r="3.1" fill="#F4EC4A" stroke="none"/><circle cx="108" cy="144" r="3.1" fill="#F4EC4A" stroke="none"/>
+    </g>
+    <g stroke="#F0DC3C" stroke-width="3.4">
+      <line x1="117.5" y1="120" x2="117.5" y2="138"/><circle cx="117.5" cy="120" r="3.1" fill="#F0DC3C" stroke="none"/><circle cx="117.5" cy="138" r="3.1" fill="#F0DC3C" stroke="none"/>
+    </g>
+    <g stroke="#F0C028" stroke-width="3.4">
+      <line x1="127" y1="126" x2="127" y2="132"/><circle cx="127" cy="126" r="3.1" fill="#F0C028" stroke="none"/><circle cx="127" cy="132" r="3.1" fill="#F0C028" stroke="none"/>
+    </g>
+    <g stroke="#F0A81A" stroke-width="3.4">
+      <line x1="136.5" y1="116" x2="136.5" y2="142"/><circle cx="136.5" cy="116" r="3.1" fill="#F0A81A" stroke="none"/><circle cx="136.5" cy="142" r="3.1" fill="#F0A81A" stroke="none"/>
+    </g>
+    <g stroke="#F08C12" stroke-width="3.4">
+      <line x1="146" y1="110" x2="146" y2="148"/><circle cx="146" cy="110" r="3.1" fill="#F08C12" stroke="none"/><circle cx="146" cy="148" r="3.1" fill="#F08C12" stroke="none"/>
+    </g>
+    <g stroke="#F0740A" stroke-width="3.4">
+      <line x1="155.5" y1="118" x2="155.5" y2="140"/><circle cx="155.5" cy="118" r="3.1" fill="#F0740A" stroke="none"/><circle cx="155.5" cy="140" r="3.1" fill="#F0740A" stroke="none"/>
+    </g>
+    <g stroke="#EE5C08" stroke-width="3.4">
+      <line x1="165" y1="124" x2="165" y2="134"/><circle cx="165" cy="124" r="3.1" fill="#EE5C08" stroke="none"/><circle cx="165" cy="134" r="3.1" fill="#EE5C08" stroke="none"/>
+    </g>
+    <g stroke="#F04A00" stroke-width="3.4">
+      <line x1="174.5" y1="118" x2="174.5" y2="140"/><circle cx="174.5" cy="118" r="3.1" fill="#F04A00" stroke="none"/><circle cx="174.5" cy="140" r="3.1" fill="#F04A00" stroke="none"/>
+    </g>
   </g>
 </svg>

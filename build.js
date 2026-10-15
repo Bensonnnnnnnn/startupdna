@@ -66,6 +66,9 @@ const icons = {
 /* layout                                                                  */
 /* ----------------------------------------------------------------------- */
 
+const logoMark = (root, { className = "logo", size = 52, alt = "" } = {}) =>
+  `<img class="${className}" src="${root}assets/img/logo.png" alt="${esc(alt)}" width="${size}" height="${size}">`;
+
 function header(root, active) {
   const link = (href, label, key) =>
     `<a href="${root}${href}"${active === key ? ' aria-current="page"' : ""}>${label}</a>`;
@@ -73,7 +76,7 @@ function header(root, active) {
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="${root}" aria-label="${esc(site.name)} home">
-      <img class="logo" src="${root}assets/img/logo.svg" alt="" width="44" height="44">
+      ${logoMark(root)}
       <span class="brand-word">Startup DNA<small>Founder stories · Taipei</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">${icons.menu}</button>
@@ -95,7 +98,7 @@ function footer(root) {
     <div class="top">
       <div>
         <a class="brand" href="${root}">
-          <img class="logo" src="${root}assets/img/logo.svg" alt="" width="44" height="44">
+          ${logoMark(root)}
           <span class="brand-word">Startup DNA<small>Founder stories · Taipei</small></span>
         </a>
         <p>${esc(site.tagline)} A founder-interview podcast from Taipei, Taiwan, exploring the makings of a founder.</p>
@@ -153,8 +156,10 @@ function layout({ title, description, root, active, body, bodyClass = "", extraH
 <meta property="og:description" content="${esc(description || site.description)}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="${thumb(episodes[0].id, "maxresdefault")}">
-<meta name="theme-color" content="#2e3bff">
+<meta name="theme-color" content="#3036FC">
+<link rel="icon" href="${root}assets/img/favicon.png" type="image/png" sizes="32x32">
 <link rel="icon" href="${root}assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${root}assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -223,6 +228,21 @@ function founderCard(f, root) {
 </a>`;
 }
 
+function pageHead(root, { eyebrow, titleHtml, lede }) {
+  return `
+<section class="page-head on-blue">
+  <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="eyebrow on-dark">${eyebrow}</p>
+      <h1>${titleHtml}</h1>
+      <p class="lede">${lede}</p>
+    </div>
+    ${logoMark(root, { className: "logo-badge", size: 168, alt: site.name })}
+  </div>
+</section>`;
+}
+
 function newsletterInline(root, dark = true) {
   return `
 <form class="form-inline" method="POST" action="${root}join.html" data-form="newsletter" name="newsletter" data-netlify="true" netlify-honeypot="bot-field">
@@ -250,7 +270,6 @@ function pageIndex() {
   <img class="helix" src="assets/img/helix.svg" alt="" aria-hidden="true">
   <div class="wrap">
     <div>
-      <p class="eyebrow on-dark">A founder-interview podcast from Taipei</p>
       <h1>We admire startups.<span class="accent">But we love founders.</span></h1>
       <p class="lede">For their vision, their grit, their unshakable will. Reaching beyond the pitch decks and demos, these are the founder's stories. Are they born, or are they made?</p>
       <div class="actions">
@@ -266,7 +285,7 @@ function pageIndex() {
     <div>
       <p class="eyebrow on-dark">Latest episode · ${fmtDate(latest.published)}</p>
       ${video(latest, { hero: true })}
-      <p style="margin:14px 0 0;font-size:15px;color:rgba(255,255,255,.85)"><strong style="color:var(--orange-soft)">${esc(latest.guestLabel)}</strong> · ${esc(latest.title)} · <a href="${epUrl(root, latest)}">Show notes →</a></p>
+      <p style="margin:14px 0 0;font-size:15px;color:rgba(255,255,255,.85)"><strong style="color:var(--orange)">${esc(latest.guestLabel)}</strong> · ${esc(latest.title)} · <a href="${epUrl(root, latest)}">Show notes →</a></p>
     </div>
   </div>
 </section>
@@ -374,13 +393,11 @@ function pageEpisodes() {
   };
 
   const body = `
-<section class="page-head on-blue">
-  <div class="wrap">
-    <p class="eyebrow on-dark">The library</p>
-    <h1>Every<span class="accent">episode.</span></h1>
-    <p class="lede">Search by founder, company or topic. Filter by series or sector. Play right here, read the show notes, and jump to the founder's page.</p>
-  </div>
-</section>
+${pageHead(root, {
+    eyebrow: "The library",
+    titleHtml: `Every<span class="accent">episode.</span>`,
+    lede: "Search by founder, company or topic. Filter by series or sector. Play right here, read the show notes, and jump to the founder's page.",
+  })}
 
 <section class="section-tight">
   <div class="wrap">
@@ -447,13 +464,11 @@ function pageEpisodes() {
 function pageFoundersIndex() {
   const root = BASE;
   const body = `
-<section class="page-head on-blue">
-  <div class="wrap">
-    <p class="eyebrow on-dark">The directory</p>
-    <h1>The<span class="accent">founders.</span></h1>
-    <p class="lede">Every guest who has sat down with Startup DNA. Who they are, what they're building, the facts behind the story, and the lines worth remembering.</p>
-  </div>
-</section>
+${pageHead(root, {
+    eyebrow: "The directory",
+    titleHtml: `The<span class="accent">founders.</span>`,
+    lede: "Every guest who has sat down with Startup DNA. Who they are, what they're building, the facts behind the story, and the lines worth remembering.",
+  })}
 
 <section class="section">
   <div class="wrap">
@@ -493,7 +508,7 @@ function pageFounder(f) {
   const quotes = f.quotes || [];
   const body = `
 <section class="founder-hero on-blue">
-  <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true" style="position:absolute;right:-8vw;top:-20%;height:140%;opacity:.12;pointer-events:none">
+  <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true">
   <div class="wrap" style="position:relative">
     <div class="portrait">
       <img src="${thumb(f.episode, "maxresdefault")}" onerror="this.onerror=null;this.src='${thumb(f.episode)}'" alt="${esc(f.name)}" style="object-position:${esc(f.photoPosition || "80% center")}">
@@ -591,13 +606,11 @@ function pageAbout() {
   const root = BASE;
   const h = site.host;
   const body = `
-<section class="page-head on-blue">
-  <div class="wrap">
-    <p class="eyebrow on-dark">About</p>
-    <h1>The makings<span class="accent">of a founder.</span></h1>
-    <p class="lede">Startup DNA is a founder-interview podcast from Taipei. We call it sDNA.</p>
-  </div>
-</section>
+${pageHead(root, {
+    eyebrow: "About",
+    titleHtml: `The makings<span class="accent">of a founder.</span>`,
+    lede: "Startup DNA is a founder-interview podcast from Taipei. We call it sDNA.",
+  })}
 
 <section class="section">
   <div class="wrap about-grid">
@@ -674,13 +687,11 @@ function pageJoin() {
   const root = BASE;
   const formspree = site.forms.formspreeEndpoint;
   const body = `
-<section class="page-head on-blue">
-  <div class="wrap">
-    <p class="eyebrow on-dark">Join</p>
-    <h1>Be part<span class="accent">of the story.</span></h1>
-    <p class="lede">Get new episodes by email, pitch yourself (or a founder you admire) as a guest, or partner with the show.</p>
-  </div>
-</section>
+${pageHead(root, {
+    eyebrow: "Join",
+    titleHtml: `Be part<span class="accent">of the story.</span>`,
+    lede: "Get new episodes by email, pitch yourself (or a founder you admire) as a guest, or partner with the show.",
+  })}
 
 <section class="section">
   <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start" id="join-grid">
