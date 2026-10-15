@@ -1,0 +1,42 @@
+{
+  "name": "Startup DNA",
+  "shortName": "sDNA",
+  "tagline": "We admire startups. But we love founders.",
+  "description": "Startup DNA is a founder-interview podcast from Taipei exploring the makings of a founder. Watch every episode, meet the founders, and join the community.",
+  "url": "https://startupdna.example.com/startupdna/",
+  "location": "Taipei, Taiwan",
+  "host": {
+    "name": "Anthony Lin",
+    "nickname": "Tony",
+    "role": "Host & Producer",
+    "bio": "Anthony Lin created Startup DNA after years observing the startup industry from a media perspective. Based in Taipei, he launched the show in 2026 with a simple conviction: the glittering headlines about unicorns and IPOs miss the part that matters, the people. Startup DNA reaches beyond pitch decks and demos to ask founders how they think, what drives them, and whether they were born or made. In its first season the show became an official media partner of InnoVEX at COMPUTEX Taipei, where the team mic'd up founders from AI robotics to analog intelligence to autonomous maritime systems.",
+    "linkedin": "https://www.linkedin.com/in/anthony-m-lin"
+  },
+  "social": {
+    "youtube": "https://www.youtube.com/@yourStartupDNA",
+    "youtubeChannelId": "UCqWhLlsSolfleDoyAqLxBZw",
+    "facebook": "https://www.facebook.com/yourStartupDNA/",
+    "instagram": "https://www.instagram.com/yourstartupdna/",
+    "linkedin": "https://www.linkedin.com/in/anthony-m-lin"
+  },
+  "manifesto": [
+    "We admire startups. But we love founders. For their vision, their grit, their unshakable will.",
+    "They are the modern-day explorers of new markets. Are they born or are they made?",
+    "The headlines tell glittering stories of unicorns and high-flying IPOs. Behind it all are extraordinary dreamers with exceptional drive.",
+    "Reaching beyond the pitch decks and demos, these are the founder's stories."
+  ],
+  "pullQuotes": [
+    { "text": "Nothing can break you, and you can always wake up and keep going.", "source": "From the show" },
+    { "text": "Does VC money kill your original vision? Actually, just the opposite.", "source": "From the show" },
+    { "text": "Half a world away from home. Down to $400. Even sleeping on the streets. The odds were stacked against them.", "source": "From the show" }
+  ],
+  "partners": [
+    { "name": "InnoVEX / COMPUTEX Taipei", "role": "Official media partner, 2026", "url": "https://innovex.computex.biz/" },
+    { "name": "PicCollage", "role": "Sponsor", "url": "https://piccollage.com/" },
+    { "name": "The Studio, Taipei", "role": "Venue sponsor", "url": "https://www.thestudio-invite.com/" }
+  ],
+  "forms": {
+    "provider": "netlify",
+    "formspreeEndpoint": "https://formspree.io/f/YOUR_FORM_ID"
+  }
+}

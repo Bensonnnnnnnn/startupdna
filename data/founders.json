@@ -1,0 +1,354 @@
+[
+  {
+    "slug": "john-fan",
+    "name": "John Fan",
+    "chineseName": "樊立勳",
+    "title": "Co-founder & CEO",
+    "company": "PicCollage",
+    "companyUrl": "https://piccollage.com/",
+    "location": "Taipei, Taiwan",
+    "episode": "65UOZSG2IS8",
+    "photoPosition": "100% center",
+    "traits": ["Patient builder", "Culture-first", "Profit over hype"],
+    "oneLiner": "Built one of Taiwan's few global consumer apps, then walked off the VC treadmill to run it profitably on his own terms.",
+    "bio": "John Fan is the Taiwanese-American co-founder and CEO of PicCollage (Cardinal Blue Software), the Taipei-based photo and video app with more than 200 million downloads. He holds degrees from Princeton and a PhD in Electrical Engineering from Stanford, and previously worked at wireless startup Flarion, which was acquired by Qualcomm. After moving to Taipei in 2008, he and co-founder Jaime Cham spent years experimenting with Facebook-platform apps before a one-month prototype built for the first iPad went viral in 2011: 3,000 downloads on day one and 400,000 in the first month. Fifteen years on, John is known in Taiwan's ecosystem for a deliberately informal, demo-driven culture, a diverse international team, and for giving back, most recently through PicCollage's Day 1 Coworking Space in Taipei.",
+    "companyBlurb": "PicCollage is a photo and video collage app launched in summer 2011 and developed in Taipei. An alumnus of 500 Startups' second batch, it grew into a top-ten download in the US, UK, Canada and Mexico, reached 150 million users by 2017, and passed 250 million downloads in 2023. Rather than chase further venture rounds, the company moved to a sustainable subscription model and now ships new creative tools weekly, folding AI in as \"magic effects\" instead of marketing it as AI. PicCollage sponsors Startup DNA.",
+    "facts": [
+      { "label": "Founded", "value": "2007 (LLC), incorporated 2009; PicCollage launched 2011" },
+      { "label": "Downloads", "value": "200M+ (LinkedIn); 250M+ reported in 2023" },
+      { "label": "Team", "value": "100+ across Taipei and remote" },
+      { "label": "Accelerator", "value": "500 Startups, Batch 2 (2011)" }
+    ],
+    "quotes": [
+      { "text": "PicCollage now has 150 million users because we have constantly added new functions while keeping it easy to use.", "source": "Taipei Times, 2017" },
+      { "text": "The environment in Taiwan is supportive for building creative things.", "source": "Startup Island TAIWAN podcast, 2023" }
+    ],
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/johnfan" },
+      { "label": "Day 1 Coworking", "url": "https://day1taipei.com/" }
+    ]
+  },
+  {
+    "slug": "caleb-chu",
+    "name": "Caleb Chu",
+    "chineseName": "小朱",
+    "title": "Founding Partner",
+    "company": "Nova Studio",
+    "companyUrl": "https://novastudio.global/",
+    "location": "Taipei, Taiwan",
+    "episode": "_hZHliTlLKk",
+    "photoPosition": "100% center",
+    "traits": ["Road less traveled", "First believer", "Rebuild education"],
+    "oneLiner": "Started his first company at 16, dropped out three times, and by 25 was running Taiwan's only student-led VC.",
+    "bio": "Caleb Chu is the founding partner of Nova Studio, a Gen Z venture fund in Taipei that writes first checks to founders who are still students or fresh graduates, and the Chief Talent Officer at StarWorks Incubator, a venture studio that embeds its own operations, finance and go-to-market teams inside early-stage companies. A self-described serial dropout who became an entrepreneur at 16, Caleb carries the \"battle scars\" of a first startup that didn't work out and has turned that experience into a hands-on model for building alongside young founders. In 2026 he co-organised the inaugural Boba Tech Summit in Taipei with Stanford ASES, bringing roughly 300 Gen Z founders from 15+ countries together with speakers like Phison founder K.S. Pua, YouTube co-founder Steve Chen and Twitch co-founder Kevin Lin. His long game is to reinvent how Asia educates its builders.",
+    "companyBlurb": "Nova Studio describes itself as the \"first believer\" in exceptional Gen Z talent in Taiwan, investing US$15K to US$100K at pre-seed and seed, then opening doors across Taiwan, the US, Japan and Singapore. Founded in 2024, it has backed seven early-stage companies since 2025, several of which have gone on to programs such as Y Combinator, Pear, Plug and Play and Seedcamp. The fund doubles as a training ground: student investors learn deal sourcing, due diligence and valuation by doing it.",
+    "facts": [
+      { "label": "Founded", "value": "Nova Studio, 2024" },
+      { "label": "Check size", "value": "US$15K to US$100K" },
+      { "label": "Portfolio", "value": "7 companies since 2025" },
+      { "label": "Also", "value": "Boba Tech Summit co-organiser; StarWorks Incubator" }
+    ],
+    "quotes": [
+      { "text": "Our goal is to become the first believer in young and ambitious founders before the path is clear, and help them scale from Asia to the world.", "source": "Nova Studio" }
+    ],
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/caleb-c-277511125" },
+      { "label": "Boba Tech Summit", "url": "https://bobatech.tw/" }
+    ]
+  },
+  {
+    "slug": "daniel-yu",
+    "name": "Daniel Yu",
+    "title": "Co-founder & CEO",
+    "company": "MetAI",
+    "companyUrl": "https://www.met-ai.com/",
+    "location": "Taipei, Taiwan",
+    "episode": "GXqJZVvTdGY",
+    "photoPosition": "100% center",
+    "traits": ["Deep tech", "Scale fast", "Tell the story"],
+    "oneLiner": "Leads the first Taiwanese startup in NVIDIA's portfolio, teaching robots in virtual worlds before they touch the real one.",
+    "bio": "Daniel Yu is co-founder and CEO of MetAI, the Taipei startup he launched in 2023 with co-founders Renton Hsu and Dave Liu to tear down the biggest barrier to physical AI: the months or years it takes to build an accurate digital twin. MetAI's generative model turns CAD files and 2D floor plans into simulation-ready 3D worlds in minutes, then produces synthetic data inside them to train robotic arms, humanoids and lights-out factories. In January 2025 the company closed a US$4 million seed round that made it the first Taiwanese company in NVIDIA's portfolio, alongside Kenmec, Solomon Technology, SparkLabs Taiwan, Addin Ventures and Upstream Ventures. Daniel has since grown the team almost tenfold in a year and is pushing MetAI toward a US presence, while urging Taiwanese founders to learn from American peers about storytelling and specialization.",
+    "companyBlurb": "MetAI builds AI-powered, physics-based digital twins for semiconductor fabs, smart warehouses and automation. A member of NVIDIA Inception, it integrates NVIDIA Omniverse to generate \"SimReady\" environments instantly and to synthesize training data tailored to a customer's operations. Instead of isolated datasets, MetAI creates dynamic virtual worlds that behave like the real one, so that robots and autonomous systems can be trained and validated at scale before deployment.",
+    "facts": [
+      { "label": "Founded", "value": "2023" },
+      { "label": "Seed round", "value": "US$4M, January 2025" },
+      { "label": "Backers", "value": "NVIDIA, Kenmec, Solomon Technology, SparkLabs Taiwan, Addin Ventures, Upstream Ventures" },
+      { "label": "Milestone", "value": "First Taiwanese company in NVIDIA's portfolio" }
+    ],
+    "quotes": [
+      { "text": "Digital twins have long been seen as a barrier to entry for physical AI due to the months or even years of effort required for development.", "source": "TechCrunch, 2025" },
+      { "text": "Instead of creating isolated datasets, MetAI builds dynamic virtual worlds, realistic virtual environments that operate exactly like the real world.", "source": "TechCrunch, 2025" }
+    ],
+    "links": [
+      { "label": "MetAI", "url": "https://www.met-ai.com/" }
+    ]
+  },
+  {
+    "slug": "mark-birch",
+    "name": "Mark Birch",
+    "title": "Founder & CEO",
+    "company": "TribeROI",
+    "companyUrl": "https://triberoi.com/",
+    "location": "Taipei, Taiwan and New York City",
+    "episode": "QLXSmxmk2ss",
+    "photoPosition": "100% center",
+    "traits": ["Community builder", "Bet on Taiwan", "Measure what matters"],
+    "oneLiner": "Spent fifteen years building communities for Stack Overflow, AWS and 30,000 salespeople, then moved from NYC to Taipei to prove what they're worth.",
+    "bio": "Mark Birch is the founder and CEO of TribeROI and the author of Community-in-a-Box, now in its second edition. His path runs through an enterprise HR startup he founded, Stack Overflow, where he helped launch and commercialize the enterprise business and expand it across APAC, and Amazon Web Services, where as Global Startup Advocate he ran the Founders in the Cloud newsletter and the AWS Startups Show, interviewing founders from seed to IPO. Along the way he built the Enterprise Sales Forum into a 30,000-member community across 24 chapters. In September 2024 Mark received the Taiwan Employment Gold Card, left AWS the following month, and chose Taipei over 30 other countries he'd visited as the place to launch TribeROI, citing affordability, runway, connectedness, culture and impact.",
+    "companyBlurb": "TribeROI is an AI startup founded in Taipei in 2025 that helps businesses measure the health and business impact of their communities. It reads the tools a company already uses, without asking anyone to migrate, and connects engagement signals to finance data so that community leaders can show a dollar figure for the value they create. The company applies agentic AI to turn community engagement into measurable outcomes, from sales growth to innovation.",
+    "facts": [
+      { "label": "Founded", "value": "2025, Taipei" },
+      { "label": "Previously", "value": "AWS Global Startup Advocate; Stack Overflow; Enterprise Sales Forum founder" },
+      { "label": "Author", "value": "Community-in-a-Box (two editions)" },
+      { "label": "Visa", "value": "Taiwan Employment Gold Card, 2024" }
+    ],
+    "quotes": [
+      { "text": "I boiled down why I chose Taiwan to five reasons: affordability & livability, runway, connectedness, culture, and impact.", "source": "Founders in the Cloud" },
+      { "text": "Community avoids the trap of influencers and AI bots by being a place where real people gather.", "source": "Founders in the Cloud" }
+    ],
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/startupmark" },
+      { "label": "Community-in-a-Box", "url": "https://community-in-a-box.com/" },
+      { "label": "Founders in the Cloud", "url": "https://www.foundersinthecloud.com/" }
+    ]
+  },
+  {
+    "slug": "camila-saenz",
+    "name": "Camila Sáenz",
+    "title": "Founder",
+    "company": "TUTEEMI",
+    "companyUrl": "https://www.tuteemi.com/",
+    "location": "Taipei, Taiwan",
+    "episode": "5skLGnr9J0Y",
+    "photoPosition": "100% center",
+    "traits": ["Foreigner to founder", "Conviction", "Global mindset"],
+    "oneLiner": "Left Guatemala at 18, earned a PhD in Taipei, and turned her side job as a language tutor into Taiwan's go-to tutor marketplace.",
+    "bio": "Camila Sáenz is the founder of TUTEEMI, a Taipei platform that connects foreign language tutors with Taiwanese students. Born in Guatemala, she left home after high school, spent six months in China, and arrived in Taiwan on a government scholarship to study journalism at Ming Chuan University. She went on to complete an MBA and a PhD in business at National Taipei University of Technology, and has spoken at three TEDx events as well as at Google and Amazon. A popular English and Spanish tutor herself, she saw that tutors lacked stable income and parents lacked a trustworthy way to find them, so in 2019 she launched a Wix MVP that drew 50 tutor applications on day one. When Covid pushed education online, she doubled down on in-person mentorship. Since filming, Camila has also become a venture partner in Unicorn Tutor and runs Outliers Guatemala to bring Taiwan's startup lessons home.",
+    "companyBlurb": "TUTEEMI (originally Key Tutors) is a marketplace for discovering, scheduling and paying for one-on-one language lessons with foreign tutors living in Taiwan, in person or online. A 2019 Dragons' Chamber finalist, the company went through both the AppWorks and 500 Global (Taiwan Tech Arena) accelerators, acquired Private Tutor Taiwan in 2023, and now hosts well over 100 tutors serving students in Taiwan and abroad, including Guatemala, Japan, South Korea and Vietnam. Its pitch is not test prep but confidence, curiosity and a global mindset.",
+    "facts": [
+      { "label": "Founded", "value": "2019, Taipei" },
+      { "label": "Accelerators", "value": "AppWorks; 500 Global x Taiwan Tech Arena" },
+      { "label": "Acquisition", "value": "Private Tutor Taiwan, 2023" },
+      { "label": "Education", "value": "MBA and PhD, National Taipei University of Technology" }
+    ],
+    "quotes": [
+      { "text": "The first day, we got over 50 people applying to be a tutor on our platform.", "source": "Taiwan News" },
+      { "text": "Actually I was not familiar with Taiwan, but I thought going to Taiwan would immerse me in a culture I had never experienced before.", "source": "Taiwan News" }
+    ],
+    "links": [
+      { "label": "TUTEEMI", "url": "https://www.tuteemi.com/" },
+      { "label": "Outliers Guatemala", "url": "https://www.outliersgt.com/" }
+    ]
+  },
+  {
+    "slug": "jac-hsieh",
+    "name": "Jac Hsieh",
+    "chineseName": "謝賀祥",
+    "title": "Founder & CEO",
+    "company": "NunoX",
+    "companyUrl": "https://nunox.io/",
+    "location": "Taipei, Taiwan",
+    "episode": "bf3RAKceUqA",
+    "photoPosition": "100% center",
+    "traits": ["Generational dream", "Pivot and persist", "Impact over wealth"],
+    "oneLiner": "The grandson of tailors who is digitising the world's fabrics so fashion can stop wasting them.",
+    "bio": "Jac Hsieh is the founder and CEO of NunoX, and the guest on Startup DNA's debut episode. A software developer by training with more than 20 years in product innovation, including time at Acer and in Silicon Valley, he previously founded DMKTZ and TG3D Studio, where he built 3D body-scanning tools for apparel. His grandparents were tailors; he remembers being carried on his grandmother's back while she sewed cheongsams one customer at a time, each taking a week. That memory became the mission: use technology to let garment makers grow. NunoX now partners with Taiwan's Textile Research Institute on an AI fabric-physics model, won a 2023 Edison Gold Award, joined NVIDIA Inception, and in October 2024 was qualified by Under Armour as a digital material supplier for its footwear supply chain.",
+    "companyBlurb": "NunoX turns physical fabric swatches into precise 1:1 digital twins. Its NX Premium Scanner captures a swatch in seconds, the NX Showroom cloud platform lets global teams simulate drape, collaborate and close deals on digital materials, and NX Muse organises scattered corporate data into an AI knowledge base. Validated by Under Armour's global deployment, the platform cuts the dozens of physical samples that fashion development normally burns through, reducing waste and time-to-market across the textile supply chain.",
+    "facts": [
+      { "label": "Founded", "value": "NunoX Tech Inc., 2024 (angel round)" },
+      { "label": "Customer", "value": "Under Armour, official footwear material digitisation supplier" },
+      { "label": "Awards", "value": "2023 Edison Gold Award; NVIDIA Inception" },
+      { "label": "Previously", "value": "Founder of DMKTZ and TG3D Studio" }
+    ],
+    "quotes": [
+      { "text": "I still remember that when I was a child my grandmother just carried me on her back and made clothes for her customers. I want to help them to grow their business.", "source": "Startup DNA, \"Scaling His Grandma's Dream\"" },
+      { "text": "We want every step, from material selection to sampling, development, and production, to be sustainable.", "source": "Taiwan News / CNA" }
+    ],
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/hsiehjac" },
+      { "label": "NunoX at InnoVEX", "url": "https://innovex.computex.biz/show/exhibitor.aspx?TZ=2680&companyId=7573&exhibitorID=3316" }
+    ]
+  },
+  {
+    "slug": "phil-ho",
+    "name": "Phil Ho",
+    "title": "Co-founder & CEO",
+    "company": "STR8 Industries",
+    "companyUrl": "https://innovex.computex.biz/show/exhibitor.aspx?companyId=7564&exhibitorID=3306",
+    "location": "Taiwan and United States",
+    "episode": "6XA1y9XeQVs",
+    "photoPosition": "0% center",
+    "traits": ["Venture builder", "Ships and chips", "Ship fast"],
+    "oneLiner": "A veteran hardware venture builder who met a naval officer over drinks and, months later, launched a drone-boat company out of stealth.",
+    "bio": "Phil Ho is co-founder and CEO of STR8 Industries, the US-Taiwan maritime autonomy company he started in 2025 with retired U.S. Navy officer Bilal Awad after a chance meeting over drinks. A veteran hardware venture builder, Phil chose to anchor the company in Taiwan, with a design studio in Hsinchu and a shipyard in Kaohsiung, because the island combines shipbuilding, electronics, computing, sensors and the engineering talent to integrate all of it. His vision for STR8's vessels is a mesh network rather than one operator per boat: every vessel is a mothership and none of them is, each running small tasks while collectively completing a larger mission. STR8 emerged from stealth at InnoVEX 2026, where it won an IC Taiwan Grand Challenge award, and joined AmCham Taiwan the same month.",
+    "companyBlurb": "STR8 Industries builds autonomous unmanned surface vessels and the edge-native autonomy software that runs them. Its modular C-100M platform, publicly revealed as Ghostwake, is designed for rapid deployment and scalable production in Taiwan and has reached 55 knots in sea trials, with autonomous navigation, escort, patrol and search-and-rescue modes. The company's core technology is distributed edge-AI architecture: real-time fusion of radar, EO/IR, AIS and inertial sensors with low-latency decision frameworks for operations in extreme environments.",
+    "facts": [
+      { "label": "Founded", "value": "2025, US-Taiwan, seed stage" },
+      { "label": "Platform", "value": "C-100M / Ghostwake USV, up to 55 knots" },
+      { "label": "Award", "value": "IC Taiwan Grand Challenge Batch 4 winner, Smart Mobility" },
+      { "label": "Bases", "value": "R&D in Hsinchu, shipyard in Kaohsiung" }
+    ],
+    "quotes": [
+      { "text": "Shipbuilding, electronics, computing, sensors, and the engineering talent to integrate all of it, in one ecosystem.", "source": "STR8 Industries on why it builds in Taiwan" }
+    ],
+    "links": [
+      { "label": "Ghostwake reveal (Naval News)", "url": "https://www.navalnews.com/naval-news/2026/08/str8-industries-reveals-made-in-taiwan-ghostwake-usv/" }
+    ]
+  },
+  {
+    "slug": "bilal-awad",
+    "name": "Bilal Awad",
+    "title": "Co-founder",
+    "company": "STR8 Industries",
+    "companyUrl": "https://innovex.computex.biz/show/exhibitor.aspx?companyId=7564&exhibitorID=3306",
+    "location": "Taiwan and United States",
+    "episode": "6XA1y9XeQVs",
+    "photoPosition": "100% center",
+    "traits": ["Operator first", "Mission clarity", "Twenty years at sea"],
+    "oneLiner": "A retired U.S. Navy officer who defines what a drone boat must do before anyone decides how to build it.",
+    "bio": "Bilal Awad is co-founder of STR8 Industries and the operational conscience of the company. A retired U.S. Naval Officer with more than two decades at sea, he brings the end-user's view to every design decision: which capabilities a vessel must have, in which sea states it must perform, and what the operator actually needs. STR8's design and engineering team then translates those requirements into mission spaces, control schemes, payload layouts, hull shapes and materials. On Startup DNA he and Phil Ho lay out a three-point autonomy framework built on consequence, reversibility and connectivity, and describe a relentless feedback loop with users as the way to solve real maritime problems rather than retrofit remote controls onto existing hulls.",
+    "companyBlurb": "STR8 Industries builds autonomous unmanned surface vessels and the edge-native autonomy software that runs them. Its modular C-100M platform, publicly revealed as Ghostwake, is designed for rapid deployment and scalable production in Taiwan and has reached 55 knots in sea trials, with autonomous navigation, escort, patrol and search-and-rescue modes. The company's core technology is distributed edge-AI architecture: real-time fusion of radar, EO/IR, AIS and inertial sensors with low-latency decision frameworks for operations in extreme environments.",
+    "facts": [
+      { "label": "Background", "value": "Retired U.S. Naval Officer, 20+ years" },
+      { "label": "Role", "value": "Operational requirements and mission design" },
+      { "label": "Co-founder", "value": "Phil Ho" }
+    ],
+    "quotes": [],
+    "links": [
+      { "label": "STR8 at IC Taiwan Grand Challenge", "url": "https://innovex.computex.biz/show/newsReleaseDetails.aspx?newsId=825" }
+    ]
+  },
+  {
+    "slug": "saim-yeong-harng",
+    "name": "Saim Yeong Harng",
+    "title": "Co-founder & CEO",
+    "company": "Synvo AI",
+    "companyUrl": "https://synvo.ai/",
+    "location": "Singapore",
+    "episode": "0F2-LzowI1s",
+    "photoPosition": "100% center",
+    "traits": ["Research to market", "Privacy-first", "Context is everything"],
+    "oneLiner": "Spun a university multimedia lab into the memory layer that lets enterprise AI remember.",
+    "bio": "Saim Yeong Harng, known as Sam, is co-founder and CEO of Synvo AI, a deep-tech spinout from the Multimedia Laboratory (MMLab) at Nanyang Technological University in Singapore. His thesis is that today's AI can answer, generate and automate but lacks the institutional memory that lets an experienced employee build context over time. Synvo's answer is an Enterprise Memory Layer that lets AI agents retain, retrieve and reason across an organisation's documents, emails, video, audio and business data, designed from the start for on-premises and on-device deployment so sensitive information never leaves the company's control. In 2026 the company raised US$1 million to commercialise the technology across Asia, and Sam spoke on the InnoVEX Pi Stage, pitching Taiwan's mid-sized manufacturers and large corporates as a strategic gateway.",
+    "companyBlurb": "Synvo AI builds a multimodal intelligence and memory layer for enterprise AI. Its commercial architecture, LiteMMem, is informed by FileGramOS, research with NTU's S-Lab that models procedural, semantic and episodic memory from how people actually create, edit and organise files; it posted the highest reported score on the FileGramBench benchmark. Deployed locally or on-device, Synvo compresses fragmented data into persistent context so that past decisions, corrections and customer exceptions carry forward, starting with knowledge-heavy workflows such as industrial quotations.",
+    "facts": [
+      { "label": "Origin", "value": "Spinout of MMLab at Nanyang Technological University" },
+      { "label": "Funding", "value": "US$1M raised, 2026" },
+      { "label": "Product", "value": "Enterprise Memory Layer (LiteMMem)" },
+      { "label": "Deployment", "value": "On-premises and on-device" }
+    ],
+    "quotes": [
+      { "text": "By giving AI an institutional memory, it accumulates value the longer a company uses it.", "source": "Synvo AI funding announcement, 2026" }
+    ],
+    "links": [
+      { "label": "Synvo AI", "url": "https://synvo.ai/" },
+      { "label": "FileGram research", "url": "https://github.com/synvo-ai/FileGram" }
+    ]
+  },
+  {
+    "slug": "palak-jain",
+    "name": "Dr. Palak Jain",
+    "title": "Co-founder & CEO",
+    "company": "Vellex Computing",
+    "companyUrl": "https://www.vellex.ai/",
+    "location": "San Francisco, USA",
+    "episode": "V6tK0WOk33M",
+    "photoPosition": "100% center",
+    "traits": ["First principles", "Power plant to silicon", "Democratise AI"],
+    "oneLiner": "A former power plant engineer from India building analog chips so that robots and satellites can learn on milliwatts, with no cloud.",
+    "bio": "Dr. Palak Jain is co-founder and CEO of Vellex Computing, a Stanford-spinout analog semiconductor company. She began her career as a power plant engineer in India, earned her PhD at the National University of Singapore, and went on to research roles at GE Global Research, Xilinx Research Labs and UC Berkeley before becoming a Cyclotron Road and Activate Fellow at Lawrence Berkeley National Lab. With co-founder Jason Poon, a Cal Poly professor and former Stanford postdoc, she is reviving analog computing to attack the cost and energy burden of modern AI training. At InnoVEX 2026, Vellex won both the IC Taiwan Grand Challenge and the Plug and Play Taiwan Pitch Contest; her story spans India, Singapore and Stanford.",
+    "companyBlurb": "Vellex Computing designs physics-based analog chips that train and adapt AI models directly on devices at milliwatt power, replacing brute-force cloud compute with the physics of the circuit itself. Founded in 2023 and headquartered in San Francisco, the company is backed by the U.S. National Science Foundation and Department of Energy, including a US$305,000 NSF SBIR Phase I grant in 2025, and targets edge AI in industrial IoT, robotics, humanoids and remote sensing, so that a satellite or drone six months into service is meaningfully better at its job than the day it shipped.",
+    "facts": [
+      { "label": "Founded", "value": "2023, Stanford spinout, HQ San Francisco" },
+      { "label": "Backing", "value": "NSF SBIR, DOE, Activate; Plug and Play Taiwan" },
+      { "label": "Awards", "value": "IC Taiwan Grand Challenge and Plug and Play Taiwan Pitch Contest, 2026" },
+      { "label": "Co-founder", "value": "Jason Poon, Cal Poly San Luis Obispo" }
+    ],
+    "quotes": [
+      { "text": "Intelligence isn't fixed at the point of deployment. It grows with experience, adapts to its environment, and improves with every hour of operation.", "source": "Vellex Computing" }
+    ],
+    "links": [
+      { "label": "Vellex Computing", "url": "https://www.vellex.ai/" }
+    ]
+  },
+  {
+    "slug": "charbel-rizk",
+    "name": "Dr. Charbel Rizk",
+    "title": "Founder & CTO",
+    "company": "Oculi",
+    "companyUrl": "https://oculi.ai/",
+    "location": "United States",
+    "episode": "Ed0W1vKcon4",
+    "photoPosition": "100% center",
+    "traits": ["Twenty-year idea", "Vision not imaging", "Edge of the edge"],
+    "oneLiner": "Wrote a white paper in 2002 arguing machines should see like eyes, not cameras. Now he's shipping the chip.",
+    "bio": "Dr. Charbel Rizk is the founder and CTO of Oculi and the core inventor of its technology. Shortly after joining the Johns Hopkins Applied Physics Laboratory in 2001, he was selected for the Missile Defense Agency's Innovation Cell, and in 2002 wrote a white paper proposing that machine vision should start at the pixel rather than at the image. Over the next two decades, as Associate Research Professor at Johns Hopkins and in senior roles at APL, more than US$40 million in funded research built the technology base that Oculi now holds exclusive worldwide rights to. An early pioneer in UAVs, AI and autonomous systems, Charbel came to InnoVEX 2026 looking for partners in Taiwan's semiconductor ecosystem.",
+    "companyBlurb": "Oculi is a fabless Johns Hopkins spinout commercialising the OCULI SPU, a Sensing and Processing Unit that runs AI directly at the pixel and transmits only the information a system needs to act on. The same software-defined chip can output full video or a minimal stream of \"actionable information\" and runs on milliwatts for most applications, cutting downstream processing by hundreds of times. In July 2026 Oculi closed the first tranche of a US$6 million Series Seed Plus led by Mosaic Fund with Kyocera CVC and GlobalFoundries, with whom it is co-developing the architecture.",
+    "facts": [
+      { "label": "Origin", "value": "Johns Hopkins University and APL spinout" },
+      { "label": "Research base", "value": "US$40M+ in funded research" },
+      { "label": "Funding", "value": "US$6M Series Seed Plus (first close July 2026), led by Mosaic Fund" },
+      { "label": "Partners", "value": "GlobalFoundries, Kyocera CVC" }
+    ],
+    "quotes": [],
+    "links": [
+      { "label": "Oculi", "url": "https://oculi.ai/" },
+      { "label": "Johns Hopkins Technology Ventures profile", "url": "https://ventures.jhu.edu/news/from-the-human-eye-to-physical-ai-giving-machines-sight/" }
+    ]
+  },
+  {
+    "slug": "lionel-chin",
+    "name": "Lionel Chin",
+    "title": "Chief Operating Officer",
+    "company": "Amity Robotics",
+    "companyUrl": "https://amityrobotics.com/",
+    "location": "Bangkok, Thailand",
+    "episode": "4kQcB9jlbOI",
+    "photoPosition": "100% center",
+    "traits": ["Intrapreneur", "ROI obsessed", "Nine countries in 16 months"],
+    "oneLiner": "The operator who took an AI concierge from zero to 30+ hotels and malls across seven markets in little more than a year.",
+    "bio": "Lionel Chin is Chief Operating Officer of Amity Robotics, where he runs end-to-end operations: product deployment, customer success, supply chain and partnerships across Southeast Asia and beyond. He describes himself as an intrapreneur, having spent two decades building and scaling products inside the Amity group, including as VP and Head of Engineering at Eko, SVP of Product and Engineering at Amity, and Managing Director of Amity Solutions, before taking the robotics business from a standing start. On Startup DNA he explains how the team deployed to nine countries and won clients like IHG and Southeast Asia's biggest malls in 16 months, why accents and dialects were the hardest technical problem, and why Taiwan is the next pilot market.",
+    "companyBlurb": "Amity Robotics, founded in Bangkok in 2024, builds ARC Base, a stationary multilingual AI concierge for hotels, malls and other high-traffic venues, powered by conversational AI and a proprietary Robotic Operating System. It is live in more than 30 properties across Singapore, Thailand, Malaysia, Indonesia, Hong Kong, the UAE and Saudi Arabia, for operators including IHG, Accor, Shangri-La, Pavilion Kuala Lumpur and Siam Piwat. At Crowne Plaza Changi Airport, the concierge \"Clara\" handles 26,000+ queries a year. In 2026 the company raised US$7 million and is preparing ARC Move, its first mobile robot.",
+    "facts": [
+      { "label": "Founded", "value": "2024, Bangkok" },
+      { "label": "Footprint", "value": "30+ properties in 7 markets" },
+      { "label": "Funding", "value": "US$7M, 2026" },
+      { "label": "Clients", "value": "IHG, Accor, Shangri-La, Pavilion KL, Siam Piwat" }
+    ],
+    "quotes": [
+      { "text": "You configure the system around what you think guests will ask. Then they surprise you every time.", "source": "LinkedIn, 2026" }
+    ],
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/lionelchin" },
+      { "label": "Amity Robotics", "url": "https://amityrobotics.com/" }
+    ]
+  },
+  {
+    "slug": "ryan-yang",
+    "name": "Ryan Yang",
+    "chineseName": "楊涵淳",
+    "title": "Lead Investor & Board Member",
+    "company": "Lean Mobility",
+    "companyUrl": "https://leanmobility.net/",
+    "location": "Taiwan",
+    "episode": "shdRywEZXnU",
+    "photoPosition": "100% center",
+    "traits": ["Cross-border", "Back the engineer", "Patient capital"],
+    "oneLiner": "The Taiwanese investor who bet on a former Toyota chief engineer's twenty-year dream of a lean, three-wheeled city car.",
+    "bio": "Ryan Yang is Chairman of Tech Sphere Investments (TSI) and the lead investor and board member of Lean Mobility, the Japan-Taiwan micro-EV startup founded in 2022 by former Toyota Chief Engineer Akihiro Yanaka. Yanaka planned and developed the TOYOTA i-ROAD and led the C+pod and C+walk compact mobility programs before leaving to pursue the idea on his own; Ryan saw roughly 20 years of accumulated technology and core patents behind it. TSI led the company's JPY 450 million Pre-A round in 2025 and followed on in a 2026 extension that brought in Japan's public-private JICN climate fund, taking total funding to JPY 800 million. On Startup DNA he explains how Japanese engineering, Taiwanese angel capital and Tainan manufacturing come together, and why Europe's micromobility market is on the roadmap from day one.",
+    "companyBlurb": "Lean Mobility's Lean3 is a two-seat, three-wheeled urban EV with air conditioning, a 100 km range, an 80 km/h top speed and a proprietary Active Lean System that tilts the body through corners. At 2,470 mm by 970 mm it is about a third the size of a passenger car and charges from a household outlet. Corporate pre-orders in Taiwan passed 500 units on day one in 2025; a mass-production plant is being built in Tainan ahead of deliveries in Japan and Taiwan from August 2026, with the LeanX data platform laying groundwork for future robotaxi services.",
+    "facts": [
+      { "label": "Founded", "value": "2022, Toyota City, Japan; Japan-Taiwan venture" },
+      { "label": "Founder", "value": "Akihiro Yanaka, former Toyota Chief Engineer (i-ROAD, C+pod)" },
+      { "label": "Funding", "value": "JPY 800M total (Pre-A + extension, TSI lead, JICN)" },
+      { "label": "Product", "value": "Lean3 micro EV, Tainan production" }
+    ],
+    "quotes": [
+      { "text": "Lean Mobility possesses unique dynamic control technology. We expect it to become a core player in next-generation MaaS and Robotaxi services.", "source": "Lean Mobility Pre-A announcement, 2025" }
+    ],
+    "links": [
+      { "label": "Lean Mobility", "url": "https://leanmobility.net/" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ryanyang" }
+    ]
+  }
+]
