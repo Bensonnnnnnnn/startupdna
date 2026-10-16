@@ -45,6 +45,8 @@ const thumbImg = (id, alt, extraAttrs = "") =>
 
 const epUrl = (root, ep) => `${root}episodes.html#ep-${ep.id}`;
 const founderUrl = (root, f) => `${root}founders/${f.slug}.html`;
+const founderPhoto = (f, root) =>
+  f.photo ? `${root}${String(f.photo).replace(/^\//, "")}` : thumb(f.episode, "maxresdefault");
 
 const guestNames = (ep) => ep.guests.map((g) => founderBySlug[g]?.name || g).join(" & ");
 
@@ -218,7 +220,7 @@ function epCard(ep, root) {
 function founderCard(f, root) {
   return `
 <a class="founder-card" href="${founderUrl(root, f)}">
-  <div class="photo"><img src="${thumb(f.episode, "maxresdefault")}" onerror="this.onerror=null;this.src='${thumb(f.episode)}'" alt="" style="object-position:${esc(f.photoPosition || "80% center")}" loading="lazy"></div>
+  <div class="photo"><img src="${founderPhoto(f, root)}" onerror="this.onerror=null;this.src='${thumb(f.episode)}'" alt="" style="object-position:${esc(f.photoPosition || "80% center")}" loading="lazy"></div>
   <div class="inner">
     <div class="name">${esc(f.name)}</div>
     <div class="co">${esc(f.company)}</div>
@@ -508,7 +510,7 @@ function pageFounder(f) {
   <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true">
   <div class="wrap" style="position:relative">
     <div class="portrait">
-      <img src="${thumb(f.episode, "maxresdefault")}" onerror="this.onerror=null;this.src='${thumb(f.episode)}'" alt="${esc(f.name)}" style="object-position:${esc(f.photoPosition || "80% center")}">
+      <img src="${founderPhoto(f, root)}" onerror="this.onerror=null;this.src='${thumb(f.episode)}'" alt="${esc(f.name)}" style="object-position:${esc(f.photoPosition || "80% center")}">
     </div>
     <div>
       <p class="breadcrumb"><a href="${root}founders/index.html">Founders</a> / ${esc(f.company)}</p>
