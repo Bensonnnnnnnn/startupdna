@@ -264,14 +264,14 @@ function pageIndex() {
 
   const body = `
 <section class="hero on-blue">
-  <img class="helix" src="assets/img/helix.svg" alt="" aria-hidden="true">
+  <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true">
   <div class="wrap">
     <div>
       <h1>We admire startups.<span class="accent">But we love founders.</span></h1>
       <p class="lede">For their vision, their grit, their unshakable will. Reaching beyond the pitch decks and demos, these are the founder's stories. Are they born, or are they made?</p>
       <div class="actions">
         <a class="btn btn-primary" href="${root}episodes.html">${icons.play} Watch the episodes</a>
-        <a class="btn btn-ghost" href="${root}founders/">Meet the founders</a>
+        <a class="btn btn-ghost" href="${root}founders/index.html">Meet the founders</a>
       </div>
       <div class="stats" aria-label="Show at a glance">
         <div class="stat"><div class="n">${episodes.length}</div><div class="l">Episodes</div></div>
@@ -309,7 +309,7 @@ function pageIndex() {
         <p class="eyebrow on-dark">The directory</p>
         <h2>Meet the founders</h2>
       </div>
-      <a class="more" href="${root}founders/">Browse all ${founders.length}</a>
+      <a class="more" href="${root}founders/index.html">Browse all ${founders.length}</a>
     </div>
     <div class="grid grid-4">
       ${featuredFounders.map((f) => founderCard(f, root)).join("")}
