@@ -48,6 +48,23 @@ const founderUrl = (root, f) => `${root}founders/${f.slug}.html`;
 const founderPhoto = (f, root) =>
   f.photo ? `${root}${String(f.photo).replace(/^\//, "")}` : thumb(f.episode, "maxresdefault");
 
+const titles = site.titles || {};
+function titleText(key, fallback = "") {
+  const value = titles[key];
+  return value != null && String(value).trim() !== "" ? String(value) : fallback;
+}
+function titleEsc(key, fallback = "") {
+  return esc(titleText(key, fallback));
+}
+function titleWithAccent(key, accentKey, fallback, fallbackAccent) {
+  return `${titleEsc(key, fallback)}<span class="accent">${titleEsc(accentKey, fallbackAccent)}</span>`;
+}
+function titleTemplate(key, fallback, vars = {}) {
+  let s = titleText(key, fallback);
+  for (const [k, v] of Object.entries(vars)) s = s.replaceAll(`{${k}}`, v);
+  return esc(s);
+}
+
 const guestNames = (ep) => ep.guests.map((g) => founderBySlug[g]?.name || g).join(" & ");
 
 const sectorsAll = [...new Set(episodes.flatMap((e) => e.sectors))].sort();
@@ -269,7 +286,7 @@ function pageIndex() {
   <img class="helix" src="${root}assets/img/helix.svg" alt="" aria-hidden="true">
   <div class="wrap">
     <div>
-      <h1>We admire startups.<span class="accent">But we love founders.</span></h1>
+      <h1>${titleWithAccent("homeHero", "homeHeroAccent", "We admire startups.", "But we love founders.")}</h1>
       <p class="lede">For their vision, their grit, their unshakable will. Reaching beyond the pitch decks and demos, these are the founder's stories. Are they born, or are they made?</p>
       <div class="actions">
         <a class="btn btn-primary" href="${root}episodes.html">${icons.play} Watch the episodes</a>
@@ -294,7 +311,7 @@ function pageIndex() {
     <div class="section-head">
       <div>
         <p class="eyebrow">Recent</p>
-        <h2>Fresh from the studio</h2>
+        <h2>${titleEsc("homeRecent", "Fresh from the studio")}</h2>
       </div>
       <a class="more" href="${root}episodes.html">All ${episodes.length} episodes</a>
     </div>
@@ -309,7 +326,7 @@ function pageIndex() {
     <div class="section-head">
       <div>
         <p class="eyebrow on-dark">The directory</p>
-        <h2>Meet the founders</h2>
+        <h2>${titleEsc("homeFounders", "Meet the founders")}</h2>
       </div>
       <a class="more" href="${root}founders/index.html">Browse all ${founders.length}</a>
     </div>
@@ -324,7 +341,7 @@ function pageIndex() {
   <div class="wrap manifesto">
     <div>
       <p class="eyebrow on-dark">Why we do this</p>
-      <h2 style="color:#fff">What is Startup DNA?</h2>
+      <h2 style="color:#fff">${titleEsc("homeManifesto", "What is Startup DNA?")}</h2>
       <p class="body">${esc(site.manifesto[2])} ${esc(site.manifesto[3])}</p>
       <p class="body">We call it sDNA. The show launched in 2026 from Taipei and in its first season became an official media partner of InnoVEX at COMPUTEX, the largest startup showcase in Asia's hardware capital.</p>
       <a class="btn btn-ghost" href="${root}about.html">About the show</a>
@@ -364,7 +381,7 @@ function pageIndex() {
   <div class="wrap">
     <div>
       <p class="eyebrow on-dark">Stay in the loop</p>
-      <h2>New episode?<span class="accent">You'll know first.</span></h2>
+      <h2>${titleWithAccent("homeCta", "homeCtaAccent", "New episode?", "You'll know first.")}</h2>
     </div>
     <div>
       ${newsletterInline(root)}
@@ -394,7 +411,7 @@ function pageEpisodes() {
   const body = `
 ${pageHead(root, {
     eyebrow: "The library",
-    titleHtml: `Every<span class="accent">episode.</span>`,
+    titleHtml: titleWithAccent("episodesHero", "episodesHeroAccent", "Every", "episode."),
     lede: "Search by founder, company or topic. Filter by series or sector. Play right here, read the show notes, and jump to the founder's page.",
   })}
 
@@ -442,7 +459,7 @@ ${pageHead(root, {
   <div class="wrap">
     <div>
       <p class="eyebrow on-dark">Never miss one</p>
-      <h2>Get the next<span class="accent">episode by email.</span></h2>
+      <h2>${titleWithAccent("episodesCta", "episodesCtaAccent", "Get the next", "episode by email.")}</h2>
     </div>
     <div>${newsletterInline(root)}</div>
   </div>
@@ -465,7 +482,7 @@ function pageFoundersIndex() {
   const body = `
 ${pageHead(root, {
     eyebrow: "The directory",
-    titleHtml: `The<span class="accent">founders.</span>`,
+    titleHtml: titleWithAccent("foundersHero", "foundersHeroAccent", "The", "founders."),
     lede: "Every guest who has sat down with Startup DNA. Who they are, what they're building, the facts behind the story, and the lines worth remembering.",
   })}
 
@@ -481,7 +498,7 @@ ${pageHead(root, {
   <div class="wrap">
     <div>
       <p class="eyebrow on-dark">Your turn</p>
-      <h2>Building something<span class="accent">worth telling?</span></h2>
+      <h2>${titleWithAccent("foundersCta", "foundersCtaAccent", "Building something", "worth telling?")}</h2>
     </div>
     <div>
       <a class="btn btn-primary" href="${root}join.html#pitch">Pitch yourself as a guest</a>
@@ -527,7 +544,7 @@ function pageFounder(f) {
   <div class="wrap founder-body">
     <div class="prose">
       <p class="eyebrow">The founder</p>
-      <h2>Who is ${esc(f.name.replace(/^Dr\.\s*/, ""))}?</h2>
+      <h2>${titleTemplate("founderWho", "Who is {name}?", { name: f.name.replace(/^Dr\.\s*/, "") })}</h2>
       <p>${esc(f.bio)}</p>
 
       ${quotes[0] ? `<div class="pullquote-lg"><blockquote>${esc(quotes[0].text)}</blockquote><cite>${esc(f.name)} · ${esc(quotes[0].source)}</cite></div>` : ""}
@@ -584,7 +601,7 @@ function pageFounder(f) {
     <div class="section-head">
       <div>
         <p class="eyebrow on-dark">Keep exploring</p>
-        <h2>More founders</h2>
+        <h2>${titleEsc("founderMore", "More founders")}</h2>
       </div>
       <a class="more" href="${root}founders/index.html">All ${founders.length}</a>
     </div>
@@ -607,7 +624,7 @@ function pageAbout() {
   const body = `
 ${pageHead(root, {
     eyebrow: "About",
-    titleHtml: `The makings<span class="accent">of a founder.</span>`,
+    titleHtml: titleWithAccent("aboutHero", "aboutHeroAccent", "The makings", "of a founder."),
     lede: "Startup DNA is a founder-interview podcast from Taipei. We call it sDNA.",
   })}
 
@@ -615,7 +632,7 @@ ${pageHead(root, {
   <div class="wrap about-grid">
     <div>
       <p class="eyebrow">The show</p>
-      <h2>${esc(site.aboutShowTitle || "Beyond the pitch deck")}</h2>
+      <h2>${titleEsc("aboutShow", "Beyond the pitch deck")}</h2>
       ${site.manifesto.map((m) => `<p style="font-size:17px">${esc(m)}</p>`).join("")}
       <p style="font-size:17px">Each conversation runs 30 to 45 minutes and is recorded in Taipei, with shorter on-the-floor interviews filmed at events like InnoVEX. We publish on YouTube, with clips on Facebook and Instagram.</p>
       <div class="social-row" style="margin-top:18px">
@@ -637,7 +654,7 @@ ${pageHead(root, {
 <section class="section on-white">
   <div class="wrap">
     <p class="eyebrow">How an episode happens</p>
-    <h2>From intro to upload</h2>
+    <h2>${titleEsc("aboutProcess", "From intro to upload")}</h2>
     <div class="steps" style="margin-top:28px">
       <div class="step"><h4>The pitch</h4><p>A founder, investor or operator reaches out, or we find them on a show floor. We look for a real story, not a product launch.</p></div>
       <div class="step"><h4>The conversation</h4><p>Recorded in Taipei at The Studio. We ask about the origin, the hard turns, the people, and what the founder believes that others don't.</p></div>
@@ -651,7 +668,7 @@ ${pageHead(root, {
     <div class="section-head">
       <div>
         <p class="eyebrow">Partners & sponsors</p>
-        <h2>Who backs the show</h2>
+        <h2>${titleEsc("aboutPartners", "Who backs the show")}</h2>
       </div>
       <a class="more" href="${root}join.html#partner">Partner with us</a>
     </div>
@@ -667,7 +684,7 @@ ${pageHead(root, {
   <div class="wrap">
     <div>
       <p class="eyebrow on-dark">Stay in the loop</p>
-      <h2>New episode?<span class="accent">You'll know first.</span></h2>
+      <h2>${titleWithAccent("homeCta", "homeCtaAccent", "New episode?", "You'll know first.")}</h2>
     </div>
     <div>${newsletterInline(root)}</div>
   </div>
@@ -688,7 +705,7 @@ function pageJoin() {
   const body = `
 ${pageHead(root, {
     eyebrow: "Join",
-    titleHtml: `Be part<span class="accent">of the story.</span>`,
+    titleHtml: titleWithAccent("joinHero", "joinHeroAccent", "Be part", "of the story."),
     lede: "Get new episodes by email, pitch yourself (or a founder you admire) as a guest, or partner with the show.",
   })}
 
@@ -696,7 +713,7 @@ ${pageHead(root, {
   <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start" id="join-grid">
     <div class="card" id="newsletter" style="scroll-margin-top:90px">
       <p class="eyebrow">Newsletter</p>
-      <h3>New episodes, in your inbox</h3>
+      <h3>${titleEsc("joinNewsletter", "New episodes, in your inbox")}</h3>
       <p style="color:var(--slate)">One email when an episode drops, with the show notes and the founder's page. Nothing else.</p>
       <form class="form" method="POST" action="${formspree}" data-form="newsletter" name="newsletter" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="newsletter">
@@ -716,7 +733,7 @@ ${pageHead(root, {
 
     <div class="card" id="pitch" style="scroll-margin-top:90px">
       <p class="eyebrow">Be a guest</p>
-      <h3>Pitch yourself as a guest</h3>
+      <h3>${titleEsc("joinPitch", "Pitch yourself as a guest")}</h3>
       <p style="color:var(--slate)">We look for founders, builders and investors with a real story: the origin, the hard turns, the conviction. Stage and sector don't matter. Taiwan connection is a plus, not a requirement.</p>
       <form class="form" method="POST" action="${formspree}" data-form="pitch" name="guest-pitch" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="guest-pitch">
@@ -769,7 +786,7 @@ ${pageHead(root, {
   <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center" id="partner-grid">
     <div>
       <p class="eyebrow">Partners & sponsors</p>
-      <h2>Put your name next to the founders</h2>
+      <h2>${titleEsc("joinPartner", "Put your name next to the founders")}</h2>
       <p style="font-size:17px">Startup DNA is an official media partner of InnoVEX at COMPUTEX and is sponsored by PicCollage and The Studio. If you run an event, accelerator, fund or venue and want to reach founders and the people who back them, we'd like to talk.</p>
       <ul style="font-size:16px;color:var(--slate)">
         <li>Event media partnership: on-site founder interviews, like our InnoVEX 2026 series</li>

@@ -14,7 +14,10 @@ const docs = {
       bio: "Anthony Lin created Startup DNA after years observing the industry.",
       linkedin: "https://www.linkedin.com/in/anthony-m-lin",
     },
-    aboutShowTitle: "Beyond the pitch deck",
+    titles: {
+      aboutShow: "Beyond the pitch deck",
+      homeRecent: "Fresh from the studio",
+    },
     manifesto: [
       "They are the modern-day explorers of new markets.",
       "Reaching beyond the pitch decks and demos.",
@@ -88,8 +91,14 @@ test("returns no match for unknown copy", () => {
 test("finds the About show title, not only manifesto body", () => {
   const matches = findText(docs, "Beyond the pitch deck");
   const fields = matches.map((m) => m.field);
-  assert.ok(fields.includes("aboutShowTitle"));
-  assert.equal(matches.find((m) => m.field === "aboutShowTitle").pathLabel, "About → Show title");
+  assert.ok(fields.includes("titles.aboutShow"));
+  assert.equal(matches.find((m) => m.field === "titles.aboutShow").pathLabel, "About → Show title");
+});
+
+test("finds homepage section titles", () => {
+  const matches = findText(docs, "Fresh from the studio");
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].field, "titles.homeRecent");
 });
 
 test("is case-insensitive", () => {

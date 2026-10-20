@@ -34,7 +34,6 @@ function collectSite(site, q, matches) {
     ["host.nickname", "Host → Nickname", "short"],
     ["host.role", "Host → Role", "short"],
     ["host.bio", "Host → Bio", "paragraph"],
-    ["aboutShowTitle", "About → Show title", "short"],
   ];
   for (const [field, pathLabel, style] of fields) {
     consider(matches, q, {
@@ -43,6 +42,44 @@ function collectSite(site, q, matches) {
       pathLabel,
       style,
       value: stringAt(site, field),
+    });
+  }
+  const titleLabels = {
+    homeHero: "Homepage → Hero",
+    homeHeroAccent: "Homepage → Hero (accent)",
+    homeRecent: "Homepage → Recent",
+    homeFounders: "Homepage → Founders",
+    homeManifesto: "Homepage → Manifesto",
+    homeCta: "Homepage → Newsletter",
+    homeCtaAccent: "Homepage → Newsletter (accent)",
+    episodesHero: "Episodes → Hero",
+    episodesHeroAccent: "Episodes → Hero (accent)",
+    episodesCta: "Episodes → Newsletter",
+    episodesCtaAccent: "Episodes → Newsletter (accent)",
+    foundersHero: "Founders → Hero",
+    foundersHeroAccent: "Founders → Hero (accent)",
+    foundersCta: "Founders → Pitch CTA",
+    foundersCtaAccent: "Founders → Pitch CTA (accent)",
+    founderWho: "Founder page → Who is",
+    founderMore: "Founder page → More founders",
+    aboutHero: "About → Hero",
+    aboutHeroAccent: "About → Hero (accent)",
+    aboutShow: "About → Show title",
+    aboutProcess: "About → Process title",
+    aboutPartners: "About → Partners title",
+    joinHero: "Join → Hero",
+    joinHeroAccent: "Join → Hero (accent)",
+    joinNewsletter: "Join → Newsletter title",
+    joinPitch: "Join → Pitch title",
+    joinPartner: "Join → Partner title",
+  };
+  for (const [key, value] of Object.entries(site.titles || {})) {
+    consider(matches, q, {
+      file: SITE_FILE,
+      field: `titles.${key}`,
+      pathLabel: titleLabels[key] || `Title → ${key}`,
+      style: "short",
+      value,
     });
   }
   (Array.isArray(site.manifesto) ? site.manifesto : []).forEach((line, i) => {
