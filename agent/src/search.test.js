@@ -17,6 +17,8 @@ const docs = {
     titles: {
       aboutShow: "Beyond the pitch deck",
       homeRecent: "Fresh from the studio",
+      foundersLede:
+        "Every guest who has sat down with Startup DNA. Who they are, what they're building, the facts behind the story, and the lines worth remembering.",
     },
     manifesto: [
       "They are the modern-day explorers of new markets.",
@@ -99,6 +101,14 @@ test("finds homepage section titles", () => {
   const matches = findText(docs, "Fresh from the studio");
   assert.equal(matches.length, 1);
   assert.equal(matches[0].field, "titles.homeRecent");
+});
+
+test("finds the Founders page intro", () => {
+  const matches = findText(docs, "Every guest who has sat down with Startup DNA");
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].field, "titles.foundersLede");
+  assert.equal(matches[0].pathLabel, "Founders → Intro");
+  assert.equal(matches[0].style, "paragraph");
 });
 
 test("is case-insensitive", () => {

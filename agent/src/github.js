@@ -3,7 +3,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { Octokit } from "octokit";
-import { ALLOWED_FILES } from "./edits.js";
+import { ALLOWED_FILES, applyEdits } from "./edits.js";
 
 function repoParts() {
   const spec = process.env.GITHUB_REPO || "";
@@ -27,6 +27,29 @@ function gitEnv(token) {
     GIT_CONFIG_KEY_0: "http.https://github.com/.extraheader",
     GIT_CONFIG_VALUE_0: `AUTHORIZATION: basic ${basic}`,
   };
+}
+
+function syncAndPush(dir, token, branch) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      try {
+        run("git", ["pull", "--rebase", "origin", branch], dir, token);
+      } catch {
+        try {
+          run("git", ["rebase", "--abort"], dir, token);
+        } catch {
+          /* already aborted or no rebase in progress */
+        }
+        throw new Error("GitHub was updated at the same time. Run /edit-text again.");
+      }
+      run("git", ["push", "origin", `HEAD:${branch}`], dir, token);
+      return;
+    } catch (err) {
+      const msg = String(err.message || "");
+      if (attempt === 1 && /rejected|fetch first|non-fast-forward/i.test(msg)) continue;
+      throw err;
+    }
+  }
 }
 
 function run(cmd, args, cwd, token) {
@@ -67,7 +90,7 @@ export function createGithub() {
       return docs;
     },
 
-    async publish({ docs, summary, userTag }) {
+    async publish({ edits, summary, userTag }) {
       const { owner, repo, branch } = repoParts();
       const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sdna-"));
       try {
@@ -80,8 +103,13 @@ export function createGithub() {
           `https://github.com/${owner}/${repo}.git`,
           dir,
         ], undefined, token);
+        const fresh = {};
         for (const file of ALLOWED_FILES) {
-          fs.writeFileSync(path.join(dir, file), `${JSON.stringify(docs[file], null, 2)}\n`);
+          fresh[file] = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
+        }
+        const { docs: next } = applyEdits(fresh, edits);
+        for (const file of ALLOWED_FILES) {
+          fs.writeFileSync(path.join(dir, file), `${JSON.stringify(next[file], null, 2)}\n`);
         }
         run("npm", ["install", "--omit=dev"], dir, token);
         run("node", ["build.js"], dir, token);
@@ -92,7 +120,7 @@ export function createGithub() {
         if (!status.trim()) return { commit: null, url: null };
         const msg = `Update site copy from Discord.\n\n${summary}\n\nRequested by ${userTag}`.slice(0, 400);
         run("git", ["commit", "-m", msg], dir, token);
-        run("git", ["push", "origin", `HEAD:${branch}`], dir, token);
+        syncAndPush(dir, token, branch);
         const sha = run("git", ["rev-parse", "HEAD"], dir, token).toString().trim();
         return {
           commit: sha,

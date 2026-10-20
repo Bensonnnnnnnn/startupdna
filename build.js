@@ -287,7 +287,7 @@ function pageIndex() {
   <div class="wrap">
     <div>
       <h1>${titleWithAccent("homeHero", "homeHeroAccent", "We admire startups.", "But we love founders.")}</h1>
-      <p class="lede">For their vision, their grit, their unshakable will. Reaching beyond the pitch decks and demos, these are the founder's stories. Are they born, or are they made?</p>
+      <p class="lede">${titleEsc("homeHeroLede", "For their vision, their grit, their unshakable will. Reaching beyond the pitch decks and demos, these are the founder's stories. Are they born, or are they made?")}</p>
       <div class="actions">
         <a class="btn btn-primary" href="${root}episodes.html">${icons.play} Watch the episodes</a>
         <a class="btn btn-ghost" href="${root}founders/index.html">Meet the founders</a>
@@ -412,7 +412,7 @@ function pageEpisodes() {
 ${pageHead(root, {
     eyebrow: "The library",
     titleHtml: titleWithAccent("episodesHero", "episodesHeroAccent", "Every", "episode."),
-    lede: "Search by founder, company or topic. Filter by series or sector. Play right here, read the show notes, and jump to the founder's page.",
+    lede: titleEsc("episodesLede", "Search by founder, company or topic. Filter by series or sector. Play right here, read the show notes, and jump to the founder's page."),
   })}
 
 <section class="section-tight">
@@ -483,7 +483,7 @@ function pageFoundersIndex() {
 ${pageHead(root, {
     eyebrow: "The directory",
     titleHtml: titleWithAccent("foundersHero", "foundersHeroAccent", "The", "founders."),
-    lede: "Every guest who has sat down with Startup DNA. Who they are, what they're building, the facts behind the story, and the lines worth remembering.",
+    lede: titleEsc("foundersLede", "Every guest who has sat down with Startup DNA. Who they are, what they're building, the facts behind the story, and the lines worth remembering."),
   })}
 
 <section class="section">
@@ -625,7 +625,7 @@ function pageAbout() {
 ${pageHead(root, {
     eyebrow: "About",
     titleHtml: titleWithAccent("aboutHero", "aboutHeroAccent", "The makings", "of a founder."),
-    lede: "Startup DNA is a founder-interview podcast from Taipei. We call it sDNA.",
+    lede: titleEsc("aboutLede", "Startup DNA is a founder-interview podcast from Taipei. We call it sDNA."),
   })}
 
 <section class="section">
@@ -706,7 +706,7 @@ function pageJoin() {
 ${pageHead(root, {
     eyebrow: "Join",
     titleHtml: titleWithAccent("joinHero", "joinHeroAccent", "Be part", "of the story."),
-    lede: "Get new episodes by email, pitch yourself (or a founder you admire) as a guest, or partner with the show.",
+    lede: titleEsc("joinLede", "Get new episodes by email, pitch yourself (or a founder you admire) as a guest, or partner with the show."),
   })}
 
 <section class="section">

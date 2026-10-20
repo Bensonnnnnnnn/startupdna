@@ -256,11 +256,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
         components: [],
       });
       try {
-        const docs = await loadDocs();
-        const { docs: next, applied } = applyEdits(docs, proposal.edits);
         const result = await github.publish({
-          docs: next,
-          summary: summarizeEdits(applied),
+          edits: proposal.edits,
+          summary: summarizeEdits(proposal.edits),
           userTag: proposal.userTag,
         });
         docsCache = { at: 0, docs: null };
