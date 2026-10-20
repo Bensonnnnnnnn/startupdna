@@ -14,6 +14,7 @@ const docs = {
       bio: "Anthony Lin created Startup DNA after years observing the industry.",
       linkedin: "https://www.linkedin.com/in/anthony-m-lin",
     },
+    aboutShowTitle: "Beyond the pitch deck",
     manifesto: [
       "They are the modern-day explorers of new markets.",
       "Reaching beyond the pitch decks and demos.",
@@ -82,6 +83,13 @@ test("returns multiple matches without guessing", () => {
 
 test("returns no match for unknown copy", () => {
   assert.deepEqual(findText(docs, "this-string-is-nowhere"), []);
+});
+
+test("finds the About show title, not only manifesto body", () => {
+  const matches = findText(docs, "Beyond the pitch deck");
+  const fields = matches.map((m) => m.field);
+  assert.ok(fields.includes("aboutShowTitle"));
+  assert.equal(matches.find((m) => m.field === "aboutShowTitle").pathLabel, "About → Show title");
 });
 
 test("is case-insensitive", () => {

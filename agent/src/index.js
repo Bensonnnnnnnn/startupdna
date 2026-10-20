@@ -19,6 +19,15 @@ import { applyEdits, clip, summarizeEdits } from "./edits.js";
 import { createGithub } from "./github.js";
 import { MAX_PICK_BUTTONS, findText } from "./search.js";
 
+function publicError(err) {
+  let s = String(err?.message || err);
+  for (const key of ["GITHUB_TOKEN", "DISCORD_TOKEN"]) {
+    const secret = process.env[key];
+    if (secret) s = s.split(secret).join("[redacted]");
+  }
+  return s.replace(/github_pat_[A-Za-z0-9_]+/g, "[redacted]");
+}
+
 function loadDotEnv() {
   const envPath = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", ".env");
   if (!fs.existsSync(envPath)) return;
@@ -49,6 +58,9 @@ const allowedUsers = (process.env.DISCORD_ALLOWED_USER_IDS || "")
 const pending = new Map();
 const github = createGithub();
 let docsCache = { at: 0, docs: null };
+let publishLock = null;
+let lastPublishAt = 0;
+const PUBLISH_COOLDOWN_MS = 20_000;
 
 async function loadDocs() {
   if (docsCache.docs && Date.now() - docsCache.at < 15_000) return docsCache.docs;
@@ -129,7 +141,7 @@ async function openEditModal(interaction, match) {
   try {
     value = currentValue(docs, match);
   } catch (err) {
-    await deny(interaction, `Could not open that field: ${err.message}`);
+    await deny(interaction, `Could not open that field: ${publicError(err)}`);
     return;
   }
   const text = String(value ?? "");
@@ -226,21 +238,47 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return;
       }
       if (kind !== "pub") return;
-      await interaction.deferUpdate();
-      const docs = await loadDocs();
-      const { docs: next, applied } = applyEdits(docs, proposal.edits);
-      const result = await github.publish({
-        docs: next,
-        summary: summarizeEdits(applied),
-        userTag: proposal.userTag,
-      });
+      if (publishLock) {
+        const waited = Math.max(1, Math.round((Date.now() - publishLock.startedAt) / 1000));
+        await deny(interaction, `Already publishing (${waited}s in). Wait for that to finish.`);
+        return;
+      }
+      if (Date.now() - lastPublishAt < PUBLISH_COOLDOWN_MS) {
+        const wait = Math.ceil((PUBLISH_COOLDOWN_MS - (Date.now() - lastPublishAt)) / 1000);
+        await deny(interaction, `Slow down — wait ${wait}s before publishing again.`);
+        return;
+      }
+      publishLock = { userTag: proposal.userTag, startedAt: Date.now() };
       pending.delete(id);
-      docsCache = { at: 0, docs: null };
-      await interaction.editReply({
-        content: result.url ? `Published: ${result.url}` : "Those files already matched the site. Nothing to commit.",
+      await interaction.update({
+        content: "Publishing… cloning the repo, rebuilding pages, then pushing to GitHub. This can take about a minute.",
         embeds: [],
         components: [],
       });
+      try {
+        const docs = await loadDocs();
+        const { docs: next, applied } = applyEdits(docs, proposal.edits);
+        const result = await github.publish({
+          docs: next,
+          summary: summarizeEdits(applied),
+          userTag: proposal.userTag,
+        });
+        docsCache = { at: 0, docs: null };
+        lastPublishAt = Date.now();
+        const elapsed = Math.round((Date.now() - publishLock.startedAt) / 1000);
+        await interaction.editReply({
+          content: result.url
+            ? `Published in ${elapsed}s: ${result.url}\nVercel will rebuild the live site in a minute or so.`
+            : "Those files already matched the site. Nothing to commit.",
+        });
+      } catch (err) {
+        console.error(err);
+        await interaction.editReply({
+          content: `Publish failed: ${publicError(err)}\nRun \`/edit-text\` again when you're ready to retry.`,
+        });
+      } finally {
+        publishLock = null;
+      }
       return;
     }
 
@@ -332,7 +370,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
   } catch (err) {
     console.error(err);
     if (interaction.isRepliable()) {
-      await deny(interaction, `Could not do that: ${err.message}`).catch(() => {});
+      await deny(interaction, `Could not do that: ${publicError(err)}`).catch(() => {});
     }
   }
 });

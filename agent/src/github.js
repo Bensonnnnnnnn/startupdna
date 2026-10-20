@@ -12,11 +12,34 @@ function repoParts() {
   return { owner, repo, branch: process.env.GITHUB_BRANCH || "main" };
 }
 
-function git(token, args, cwd) {
-  return execFileSync("git", ["-c", `http.extraHeader=Authorization: Bearer ${token}`, ...args], {
-    cwd,
-    stdio: "pipe",
-  });
+function redact(text, token) {
+  let s = String(text || "");
+  if (token) s = s.split(token).join("[redacted]");
+  return s.replace(/github_pat_[A-Za-z0-9_]+/g, "[redacted]");
+}
+
+function gitEnv(token) {
+  const basic = Buffer.from(`x-access-token:${token}`, "utf8").toString("base64");
+  return {
+    ...process.env,
+    GIT_TERMINAL_PROMPT: "0",
+    GIT_CONFIG_COUNT: "1",
+    GIT_CONFIG_KEY_0: "http.https://github.com/.extraheader",
+    GIT_CONFIG_VALUE_0: `AUTHORIZATION: basic ${basic}`,
+  };
+}
+
+function run(cmd, args, cwd, token) {
+  try {
+    return execFileSync(cmd, args, {
+      cwd,
+      stdio: ["ignore", "pipe", "pipe"],
+      env: cmd === "git" && token ? gitEnv(token) : { ...process.env, GIT_TERMINAL_PROMPT: "0" },
+    });
+  } catch (err) {
+    const stderr = Buffer.isBuffer(err.stderr) ? err.stderr.toString("utf8") : String(err.stderr || "");
+    throw new Error(redact(stderr || err.message, token).trim() || `${cmd} failed`);
+  }
 }
 
 export function createGithub() {
@@ -47,37 +70,37 @@ export function createGithub() {
     async publish({ docs, summary, userTag }) {
       const { owner, repo, branch } = repoParts();
       const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sdna-"));
-      git(token, [
-        "clone",
-        "--depth",
-        "1",
-        "--branch",
-        branch,
-        `https://github.com/${owner}/${repo}.git`,
-        dir,
-      ]);
-      for (const file of ALLOWED_FILES) {
-        fs.writeFileSync(path.join(dir, file), `${JSON.stringify(docs[file], null, 2)}\n`);
-      }
-      execFileSync("npm", ["install", "--omit=dev"], { cwd: dir, stdio: "pipe" });
-      execFileSync("node", ["build.js"], { cwd: dir, stdio: "pipe" });
-      execFileSync("git", ["config", "user.name", "Startup DNA Bot"], { cwd: dir });
-      execFileSync("git", ["config", "user.email", "bot@startupdna.local"], { cwd: dir });
-      execFileSync("git", ["add", "data", "startupdna"], { cwd: dir });
-      const status = execFileSync("git", ["status", "--porcelain"], { cwd: dir }).toString();
-      if (!status.trim()) {
+      try {
+        run("git", [
+          "clone",
+          "--depth",
+          "1",
+          "--branch",
+          branch,
+          `https://github.com/${owner}/${repo}.git`,
+          dir,
+        ], undefined, token);
+        for (const file of ALLOWED_FILES) {
+          fs.writeFileSync(path.join(dir, file), `${JSON.stringify(docs[file], null, 2)}\n`);
+        }
+        run("npm", ["install", "--omit=dev"], dir, token);
+        run("node", ["build.js"], dir, token);
+        run("git", ["config", "user.name", "Startup DNA Bot"], dir, token);
+        run("git", ["config", "user.email", "bot@startupdna.local"], dir, token);
+        run("git", ["add", "data", "startupdna"], dir, token);
+        const status = run("git", ["status", "--porcelain"], dir, token).toString();
+        if (!status.trim()) return { commit: null, url: null };
+        const msg = `Update site copy from Discord.\n\n${summary}\n\nRequested by ${userTag}`.slice(0, 400);
+        run("git", ["commit", "-m", msg], dir, token);
+        run("git", ["push", "origin", `HEAD:${branch}`], dir, token);
+        const sha = run("git", ["rev-parse", "HEAD"], dir, token).toString().trim();
+        return {
+          commit: sha,
+          url: `https://github.com/${owner}/${repo}/commit/${sha}`,
+        };
+      } finally {
         fs.rmSync(dir, { recursive: true, force: true });
-        return { commit: null, url: null };
       }
-      const msg = `Update site copy from Discord.\n\n${summary}\n\nRequested by ${userTag}`.slice(0, 400);
-      execFileSync("git", ["commit", "-m", msg], { cwd: dir });
-      git(token, ["push", "origin", `HEAD:${branch}`], dir);
-      const sha = execFileSync("git", ["rev-parse", "HEAD"], { cwd: dir }).toString().trim();
-      fs.rmSync(dir, { recursive: true, force: true });
-      return {
-        commit: sha,
-        url: `https://github.com/${owner}/${repo}/commit/${sha}`,
-      };
     },
   };
 }

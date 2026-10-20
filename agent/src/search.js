@@ -34,6 +34,7 @@ function collectSite(site, q, matches) {
     ["host.nickname", "Host → Nickname", "short"],
     ["host.role", "Host → Role", "short"],
     ["host.bio", "Host → Bio", "paragraph"],
+    ["aboutShowTitle", "About → Show title", "short"],
   ];
   for (const [field, pathLabel, style] of fields) {
     consider(matches, q, {

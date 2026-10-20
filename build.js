@@ -615,7 +615,7 @@ ${pageHead(root, {
   <div class="wrap about-grid">
     <div>
       <p class="eyebrow">The show</p>
-      <h2>Beyond the pitch deck</h2>
+      <h2>${esc(site.aboutShowTitle || "Beyond the pitch deck")}</h2>
       ${site.manifesto.map((m) => `<p style="font-size:17px">${esc(m)}</p>`).join("")}
       <p style="font-size:17px">Each conversation runs 30 to 45 minutes and is recorded in Taipei, with shorter on-the-floor interviews filmed at events like InnoVEX. We publish on YouTube, with clips on Facebook and Instagram.</p>
       <div class="social-row" style="margin-top:18px">
