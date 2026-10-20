@@ -6,10 +6,15 @@
     "series": "Founder Stories",
     "title": "The App Powerhouse That Runs Like It's Day One",
     "hook": "How do you build a global app business on your own terms?",
-    "guests": ["john-fan"],
+    "guests": [
+      "john-fan"
+    ],
     "guestLabel": "John Fan",
     "company": "PicCollage",
-    "sectors": ["Consumer Apps", "Creative Tech"],
+    "sectors": [
+      "Consumer Apps",
+      "Creative Tech"
+    ],
     "duration": "39:48",
     "published": "2026-10-15",
     "description": "PicCollage CEO and co-founder John Fan breaks down the journey from an investor-backed startup to a profitable, self-sustaining powerhouse, all while preserving the startup culture along the way.",
@@ -20,10 +25,22 @@
       "AI with less \"AI\": offering new tech as \"magic effects\" to enhance user creativity without the hype."
     ],
     "links": [
-      { "label": "PicCollage", "url": "https://piccollage.com/" },
-      { "label": "PicCollage on LinkedIn", "url": "https://www.linkedin.com/company/piccollage" }
+      {
+        "label": "PicCollage",
+        "url": "https://piccollage.com/"
+      },
+      {
+        "label": "PicCollage on LinkedIn",
+        "url": "https://www.linkedin.com/company/piccollage"
+      }
     ],
-    "tags": ["piccollage", "creativetech", "subscription", "culture", "taiwan"]
+    "tags": [
+      "piccollage",
+      "creativetech",
+      "subscription",
+      "culture",
+      "taiwan"
+    ]
   },
   {
     "id": "_hZHliTlLKk",
@@ -32,10 +49,15 @@
     "series": "Founder Stories",
     "title": "Or Have Gen Z Founders Already Arrived?",
     "hook": "What drove Caleb Chu to become an entrepreneur at 16 and run a VC by 25?",
-    "guests": ["caleb-chu"],
+    "guests": [
+      "caleb-chu"
+    ],
     "guestLabel": "Caleb Chu",
     "company": "Nova Studio",
-    "sectors": ["Venture Capital", "Education"],
+    "sectors": [
+      "Venture Capital",
+      "Education"
+    ],
     "duration": "41:33",
     "published": "2026-09-04",
     "description": "Caleb Chu, founding partner of Nova Studio and venture partner at StarWorks, unpacks his journey from the early \"battle scars\" of his first startup to pioneering a hands-on venture studio model that builds side-by-side with Gen Z founders.",
@@ -46,10 +68,22 @@
       "His long-term vision to reinvent higher education."
     ],
     "links": [
-      { "label": "Nova Studio", "url": "https://novastudio.global/" },
-      { "label": "Boba Tech Summit", "url": "https://bobatech.tw/" }
+      {
+        "label": "Nova Studio",
+        "url": "https://novastudio.global/"
+      },
+      {
+        "label": "Boba Tech Summit",
+        "url": "https://bobatech.tw/"
+      }
     ],
-    "tags": ["genz", "venture", "education", "bobatech", "taiwan"]
+    "tags": [
+      "genz",
+      "venture",
+      "education",
+      "bobatech",
+      "taiwan"
+    ]
   },
   {
     "id": "GXqJZVvTdGY",
@@ -58,10 +92,16 @@
     "series": "Founder Stories",
     "title": "Building Physical AI: Inside MetAI's NVIDIA-Backed Tech",
     "hook": "How do you train your robot?",
-    "guests": ["daniel-yu"],
+    "guests": [
+      "daniel-yu"
+    ],
     "guestLabel": "Daniel Yu",
     "company": "MetAI",
-    "sectors": ["AI", "Robotics", "Industrial"],
+    "sectors": [
+      "AI",
+      "Robotics",
+      "Industrial"
+    ],
     "duration": "42:18",
     "published": "2026-08-21",
     "description": "Daniel Yu, co-founder and CEO of NVIDIA-backed MetAI, dives into the next frontier of industrial innovation: physical AI. Robots and autonomous systems cannot learn from text alone.",
@@ -72,9 +112,18 @@
       "What founders in Taiwan can learn from founders in the US about storytelling and specialization."
     ],
     "links": [
-      { "label": "MetAI", "url": "https://www.met-ai.com/" }
+      {
+        "label": "MetAI",
+        "url": "https://www.met-ai.com/"
+      }
     ],
-    "tags": ["physicalai", "nvidia", "digitaltwin", "robotics", "taiwan"]
+    "tags": [
+      "physicalai",
+      "nvidia",
+      "digitaltwin",
+      "robotics",
+      "taiwan"
+    ]
   },
   {
     "id": "QLXSmxmk2ss",
@@ -83,10 +132,16 @@
     "series": "Founder Stories",
     "title": "Mark Birch: Tapping Into Community Value, Taiwan's AI Power",
     "hook": "Is the \"lone founder\" myth holding startups back?",
-    "guests": ["mark-birch"],
+    "guests": [
+      "mark-birch"
+    ],
     "guestLabel": "Mark Birch",
     "company": "TribeROI",
-    "sectors": ["AI", "SaaS", "Community"],
+    "sectors": [
+      "AI",
+      "SaaS",
+      "Community"
+    ],
     "duration": "45:21",
     "published": "2026-08-04",
     "description": "TribeROI founder and CEO Mark Birch breaks down how community helps founders and why it is the ultimate force multiplier for high-growth companies. Also author of Community-in-a-Box, he launched the company to help businesses see their community data better and discover the value within.",
@@ -96,10 +151,23 @@
       "The opportunity to develop a world-class software startup ecosystem outside of Silicon Valley, despite what some say."
     ],
     "links": [
-      { "label": "TribeROI", "url": "https://triberoi.com/" },
-      { "label": "Community-in-a-Box", "url": "https://community-in-a-box.com/" }
+      {
+        "label": "TribeROI",
+        "url": "https://triberoi.com/"
+      },
+      {
+        "label": "Community-in-a-Box",
+        "url": "https://community-in-a-box.com/"
+      }
     ],
-    "tags": ["community", "agenticai", "goldcard", "ecosystem", "nyc", "taiwan"]
+    "tags": [
+      "community",
+      "agenticai",
+      "goldcard",
+      "ecosystem",
+      "nyc",
+      "taiwan"
+    ]
   },
   {
     "id": "5skLGnr9J0Y",
@@ -108,10 +176,14 @@
     "series": "Founder Stories",
     "title": "Camila Sáenz: Unlocking the Global Mindset With TUTEEMI",
     "hook": "What does it take to build a thriving business far from home?",
-    "guests": ["camila-saenz"],
+    "guests": [
+      "camila-saenz"
+    ],
     "guestLabel": "Camila Sáenz",
     "company": "TUTEEMI",
-    "sectors": ["Education"],
+    "sectors": [
+      "Education"
+    ],
     "duration": "31:02",
     "published": "2026-07-23",
     "description": "Camila Sáenz shares her journey from foreigner to founder. She built TUTEEMI into one of Taiwan's most inspiring education startups, scaling with global accelerator AppWorks. Rather than rigid test prep, she wanted to give students confidence, curiosity, and a true global mindset.",
@@ -122,11 +194,26 @@
       "Exporting the Taiwan experience: what Guatemala and other Latin American ecosystems can learn from Taiwan."
     ],
     "links": [
-      { "label": "TUTEEMI", "url": "https://www.tuteemi.com/" },
-      { "label": "Outliers Guatemala", "url": "https://www.outliersgt.com/" },
-      { "label": "AppWorks", "url": "https://appworks.tw/" }
+      {
+        "label": "TUTEEMI",
+        "url": "https://www.tuteemi.com/"
+      },
+      {
+        "label": "Outliers Guatemala",
+        "url": "https://www.outliersgt.com/"
+      },
+      {
+        "label": "AppWorks",
+        "url": "https://appworks.tw/"
+      }
     ],
-    "tags": ["edtech", "appworks", "guatemala", "foreignfounder", "taiwan"]
+    "tags": [
+      "edtech",
+      "appworks",
+      "guatemala",
+      "foreignfounder",
+      "taiwan"
+    ]
   },
   {
     "id": "bf3RAKceUqA",
@@ -135,10 +222,16 @@
     "series": "Founder Stories",
     "title": "Jac Hsieh: Building NunoX and His Generational Dream",
     "hook": "From pivoting his first startup to pioneering textile AI.",
-    "guests": ["jac-hsieh"],
+    "guests": [
+      "jac-hsieh"
+    ],
     "guestLabel": "Jac Hsieh",
     "company": "NunoX",
-    "sectors": ["AI", "Fashion Tech", "Sustainability"],
+    "sectors": [
+      "AI",
+      "Fashion Tech",
+      "Sustainability"
+    ],
     "duration": "34:32",
     "published": "2026-05-21",
     "description": "In the debut episode of Startup DNA, the founder of NunoX reveals his journey of modernizing his family's tailoring legacy, eliminating fashion waste through digitization, and building a people-centric startup culture.",
@@ -149,9 +242,18 @@
       "The ultimate goal: shifting the focus from material wealth to massive environmental impact."
     ],
     "links": [
-      { "label": "NunoX", "url": "https://nunox.io/" }
+      {
+        "label": "NunoX",
+        "url": "https://nunox.io/"
+      }
     ],
-    "tags": ["fashiontech", "textile", "sustainability", "debut", "taiwan"]
+    "tags": [
+      "fashiontech",
+      "textile",
+      "sustainability",
+      "debut",
+      "taiwan"
+    ]
   },
   {
     "id": "6XA1y9XeQVs",
@@ -160,10 +262,17 @@
     "series": "InnoVEX 2026",
     "title": "From Anonymous to Autonomous: STR8 Sets Sail on Edge AI at Sea",
     "hook": "What happens when a retired U.S. Naval Officer meets a veteran hardware venture builder? Startup at first sight.",
-    "guests": ["phil-ho", "bilal-awad"],
+    "guests": [
+      "phil-ho",
+      "bilal-awad"
+    ],
     "guestLabel": "Phil Ho & Bilal Awad",
     "company": "STR8 Industries",
-    "sectors": ["Maritime", "Robotics", "Deep Tech"],
+    "sectors": [
+      "Maritime",
+      "Robotics",
+      "Deep Tech"
+    ],
     "duration": "11:11",
     "published": "2026-07-07",
     "description": "STR8 Industries, a deep tech maritime autonomy company, emerges from stealth at InnoVEX/Computex. The US-Taiwan startup is building high-performance \"drone boats\" that tap Taiwan's elite tech, computing, and shipbuilding ecosystem while delivering a plug-and-play platform for maritime security, data collection, and remote inspection.",
@@ -173,9 +282,19 @@
       "Ship fast, iterate faster: a relentless obsession with user feedback to solve real-world maritime demands."
     ],
     "links": [
-      { "label": "STR8 Industries at InnoVEX", "url": "https://innovex.computex.biz/show/exhibitor.aspx?companyId=7564&exhibitorID=3306" }
+      {
+        "label": "STR8 Industries at InnoVEX",
+        "url": "https://innovex.computex.biz/show/exhibitor.aspx?companyId=7564&exhibitorID=3306"
+      }
     ],
-    "tags": ["maritime", "autonomy", "droneboats", "ictgc", "innovex", "computex"]
+    "tags": [
+      "maritime",
+      "autonomy",
+      "droneboats",
+      "ictgc",
+      "innovex",
+      "computex"
+    ]
   },
   {
     "id": "0F2-LzowI1s",
@@ -184,10 +303,15 @@
     "series": "InnoVEX 2026",
     "title": "Solving AI's Biggest Enterprise Flaws: Inside Synvo AI",
     "hook": "Artificial intelligence is the greatest recent breakthrough for humankind. But what is it still missing? The gem is in the context.",
-    "guests": ["saim-yeong-harng"],
+    "guests": [
+      "saim-yeong-harng"
+    ],
     "guestLabel": "Saim Yeong Harng",
     "company": "Synvo AI",
-    "sectors": ["AI", "Enterprise"],
+    "sectors": [
+      "AI",
+      "Enterprise"
+    ],
     "duration": "9:14",
     "published": "2026-07-01",
     "description": "Saim (\"Sam\") Yeong Harng, co-founder and CEO of Synvo AI, a spinout from Nanyang Technological University's AI lab, on building the definitive enterprise memory layer for agentic systems.",
@@ -197,9 +321,18 @@
       "Strategic Taiwan: targeting mid-sized manufacturing firms and large corporates, with Taiwan as a strategic gateway."
     ],
     "links": [
-      { "label": "Synvo AI", "url": "https://synvo.ai/" }
+      {
+        "label": "Synvo AI",
+        "url": "https://synvo.ai/"
+      }
     ],
-    "tags": ["enterpriseai", "memory", "ondevice", "singapore", "innovex"]
+    "tags": [
+      "enterpriseai",
+      "memory",
+      "ondevice",
+      "singapore",
+      "innovex"
+    ]
   },
   {
     "id": "V6tK0WOk33M",
@@ -208,10 +341,15 @@
     "series": "InnoVEX 2026",
     "title": "Vellex Computing: Faster, Cheaper, Off-Cloud With Analog Intelligence",
     "hook": "An AI that trains itself and is accessible to many?",
-    "guests": ["palak-jain"],
+    "guests": [
+      "palak-jain"
+    ],
     "guestLabel": "Dr. Palak Jain",
     "company": "Vellex Computing",
-    "sectors": ["Semiconductors", "AI"],
+    "sectors": [
+      "Semiconductors",
+      "AI"
+    ],
     "duration": "11:21",
     "published": "2026-06-09",
     "description": "Dr. Palak Jain, co-founder and CEO of Stanford spinout Vellex Computing, on making AI training faster, cheaper, and more accessible. Vellex is a winner of the IC Taiwan Grand Challenge and the Plug and Play Taiwan Pitch Contest.",
@@ -222,9 +360,19 @@
       "Global journey: the story behind Vellex's roots in India, Singapore, and Stanford."
     ],
     "links": [
-      { "label": "Vellex Computing", "url": "https://www.vellex.ai/" }
+      {
+        "label": "Vellex Computing",
+        "url": "https://www.vellex.ai/"
+      }
     ],
-    "tags": ["analog", "semiconductor", "edgeai", "stanford", "ictgc", "innovex"]
+    "tags": [
+      "analog",
+      "semiconductor",
+      "edgeai",
+      "stanford",
+      "ictgc",
+      "innovex"
+    ]
   },
   {
     "id": "Ed0W1vKcon4",
@@ -233,10 +381,16 @@
     "series": "InnoVEX 2026",
     "title": "Visual AI: How Oculi Wants Machines to See",
     "hook": "Cameras are just digital mirrors. What would true machine vision look like?",
-    "guests": ["charbel-rizk"],
+    "guests": [
+      "charbel-rizk"
+    ],
     "guestLabel": "Dr. Charbel Rizk",
     "company": "Oculi",
-    "sectors": ["Semiconductors", "AI", "Vision"],
+    "sectors": [
+      "Semiconductors",
+      "AI",
+      "Vision"
+    ],
     "duration": "10:01",
     "published": "2026-06-08",
     "description": "Dr. Charbel Rizk, founder and CTO of Oculi, on redefining how devices \"see\" the world with a smart, programmable vision sensor that mimics the human eye.",
@@ -247,9 +401,18 @@
       "Global expansion: why Oculi is seeking partners in Taiwan's semiconductor ecosystem."
     ],
     "links": [
-      { "label": "Oculi", "url": "https://oculi.ai/" }
+      {
+        "label": "Oculi",
+        "url": "https://oculi.ai/"
+      }
     ],
-    "tags": ["visionai", "sensor", "semiconductor", "johnshopkins", "innovex"]
+    "tags": [
+      "visionai",
+      "sensor",
+      "semiconductor",
+      "johnshopkins",
+      "innovex"
+    ]
   },
   {
     "id": "4kQcB9jlbOI",
@@ -258,10 +421,16 @@
     "series": "InnoVEX 2026",
     "title": "Amity Robotics: Humanizing AI Robots",
     "hook": "More and more we'll find ourselves talking to robots at hotels, airports and shopping malls, even hospitals.",
-    "guests": ["lionel-chin"],
+    "guests": [
+      "lionel-chin"
+    ],
     "guestLabel": "Lionel Chin",
     "company": "Amity Robotics",
-    "sectors": ["Robotics", "AI", "Hospitality"],
+    "sectors": [
+      "Robotics",
+      "AI",
+      "Hospitality"
+    ],
     "duration": "10:31",
     "published": "2026-06-05",
     "description": "Lionel Chin, COO of Amity Robotics, on driving startup growth as an \"intrapreneur\": deploying to 9 countries and securing global clients like IHG hotels and Southeast Asia's biggest malls in just 16 months.",
@@ -271,9 +440,18 @@
       "Eye on Taiwan: how advanced manufacturing, robust tourism and a skilled labor pool make it their next pilot market."
     ],
     "links": [
-      { "label": "Amity Robotics", "url": "https://amityrobotics.com/" }
+      {
+        "label": "Amity Robotics",
+        "url": "https://amityrobotics.com/"
+      }
     ],
-    "tags": ["robotics", "hospitality", "concierge", "intrapreneur", "innovex"]
+    "tags": [
+      "robotics",
+      "hospitality",
+      "concierge",
+      "intrapreneur",
+      "innovex"
+    ]
   },
   {
     "id": "shdRywEZXnU",
@@ -282,10 +460,15 @@
     "series": "InnoVEX 2026",
     "title": "Lean Mobility: Fast Track to Global Roads?",
     "hook": "What happens when you combine Japanese automotive engineering with Taiwan's manufacturing muscle?",
-    "guests": ["ryan-yang"],
+    "guests": [
+      "ryan-yang"
+    ],
     "guestLabel": "Ryan Yang",
     "company": "Lean Mobility",
-    "sectors": ["Mobility", "EV"],
+    "sectors": [
+      "Mobility",
+      "EV"
+    ],
     "duration": "13:43",
     "published": "2026-06-04",
     "description": "Lean Mobility's lead investor and board member Ryan Yang reveals how this cross-border venture, founded by former Toyota Chief Engineer Akihiro Yanaka, is revving up to disrupt the global mobility landscape.",
@@ -296,8 +479,17 @@
       "The roadmap: a simultaneous launch in Japan and Taiwan."
     ],
     "links": [
-      { "label": "Lean Mobility", "url": "https://leanmobility.net/" }
+      {
+        "label": "Lean Mobility",
+        "url": "https://leanmobility.net/"
+      }
     ],
-    "tags": ["ev", "micromobility", "japan", "toyota", "innovex"]
+    "tags": [
+      "ev",
+      "micromobility",
+      "japan",
+      "toyota",
+      "innovex"
+    ]
   }
 ]
