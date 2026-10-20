@@ -4,5 +4,8 @@
   "description": "Static site for the Startup DNA podcast",
   "scripts": {
     "build": "node build.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.11"
   }
 }

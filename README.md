@@ -2,7 +2,7 @@
 
 A static website for the [Startup DNA](https://www.youtube.com/@yourStartupDNA) founder-interview podcast from Taipei.
 
-No framework, no `node_modules`. HTML is generated from JSON. Hosting needs no build step.
+No framework. HTML is generated from JSON. `node build.js` minifies HTML, CSS, and JS (needs `npm install` once for [esbuild](https://esbuild.github.io/)).
 
 ## Discord copy edits
 
@@ -11,6 +11,7 @@ The show operator can change bios, taglines, and other JSON copy from Discord. T
 ## Preview locally
 
 ```bash
+npm install
 node build.js
 python3 -m http.server 8765
 ```
@@ -30,7 +31,7 @@ Show copy lives in [`data/site.json`](data/site.json) (tagline, manifesto, partn
 
 Drop the project folder onto [Netlify](https://www.netlify.com/drop/), [Cloudflare Pages](https://pages.cloudflare.com/), GitHub Pages, or any static host. Publish the repo root. The site is served at `/startupdna/`; `/` redirects there.
 
-**Vercel** runs `node build.js` on every deploy (`vercel.json`). It publishes a `dist/` folder that still contains `/startupdna/`, so existing URLs stay the same. No framework, no npm dependencies.
+**Vercel** installs esbuild, runs `node build.js`, and publishes minified files from `dist/` (`vercel.json`). URLs stay at `/startupdna/`. Source CSS/JS in `assets/` stay readable; the generated copies under `startupdna/` and `dist/` are minified.
 
 On other hosts, if you want a build command:
 

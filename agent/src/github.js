@@ -59,6 +59,7 @@ export function createGithub() {
       for (const file of ALLOWED_FILES) {
         fs.writeFileSync(path.join(dir, file), `${JSON.stringify(docs[file], null, 2)}\n`);
       }
+      execFileSync("npm", ["install", "--omit=dev"], { cwd: dir, stdio: "pipe" });
       execFileSync("node", ["build.js"], { cwd: dir, stdio: "pipe" });
       execFileSync("git", ["config", "user.name", "Startup DNA Bot"], { cwd: dir });
       execFileSync("git", ["config", "user.email", "bot@startupdna.local"], { cwd: dir });

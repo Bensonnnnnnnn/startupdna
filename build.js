@@ -806,13 +806,71 @@ ${pageHead(root, {
 }
 
 /* ----------------------------------------------------------------------- */
+/* minify                                                                  */
+/* ----------------------------------------------------------------------- */
+
+function minifyHtml(html) {
+  const blocks = [];
+  const protectedHtml = html.replace(/<(script|style|textarea|pre)(\b[^>]*)>[\s\S]*?<\/\1>/gi, (m) => {
+    blocks.push(m);
+    return `\0BLOCK${blocks.length - 1}\0`;
+  });
+  const min = protectedHtml
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/>\s+</g, "><")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{2,}/g, "\n")
+    .trim();
+  return min.replace(/\0BLOCK(\d+)\0/g, (_, i) => blocks[Number(i)]);
+}
+
+function minifyAssets() {
+  let esbuild;
+  try {
+    esbuild = require("esbuild");
+  } catch {
+    console.warn("esbuild not installed; CSS/JS left unminified. Run npm install.");
+    return;
+  }
+  const jobs = [
+    ["css", path.join(OUT, "assets/css")],
+    ["js", path.join(OUT, "assets/js")],
+  ];
+  for (const [loader, dir] of jobs) {
+    if (!fs.existsSync(dir)) continue;
+    for (const name of fs.readdirSync(dir)) {
+      if (!name.endsWith(`.${loader}`)) continue;
+      const file = path.join(dir, name);
+      const result = esbuild.transformSync(fs.readFileSync(file, "utf8"), {
+        loader,
+        minify: true,
+        legalComments: "none",
+      });
+      fs.writeFileSync(file, result.code);
+      console.log("minified", path.posix.join("startupdna/assets", loader, name));
+    }
+  }
+}
+
+function stageDist() {
+  const distSite = path.join(ROOT, "dist", "startupdna");
+  fs.rmSync(distSite, { recursive: true, force: true });
+  copyDir(OUT, distSite);
+  const rootIndex = path.join(ROOT, "index.html");
+  if (fs.existsSync(rootIndex)) {
+    fs.copyFileSync(rootIndex, path.join(ROOT, "dist", "index.html"));
+  }
+  console.log("staged dist/startupdna");
+}
+
+/* ----------------------------------------------------------------------- */
 /* write                                                                   */
 /* ----------------------------------------------------------------------- */
 
 function write(rel, html) {
   const out = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, html);
+  fs.writeFileSync(out, minifyHtml(html));
   console.log("wrote", path.posix.join("startupdna", rel));
 }
 
@@ -827,6 +885,7 @@ function copyDir(src, dest) {
 }
 
 copyDir(path.join(ROOT, "assets"), path.join(OUT, "assets"));
+minifyAssets();
 write("index.html", pageIndex());
 write("episodes.html", pageEpisodes());
 write("about.html", pageAbout());
@@ -846,7 +905,7 @@ for (const file of fs.readdirSync(founderDir)) {
 
 fs.writeFileSync(
   path.join(ROOT, "index.html"),
-  `<!doctype html>
+  minifyHtml(`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -859,7 +918,8 @@ fs.writeFileSync(
 <p><a href="${BASE}">Continue to Startup DNA</a></p>
 </body>
 </html>
-`
+`)
 );
 
+stageDist();
 console.log(`\nBuilt ${episodes.length} episodes, ${founders.length} founder pages at ${BASE}`);
