@@ -1,0 +1,8 @@
+{
+  "name": "startupdna",
+  "private": true,
+  "description": "Static site for the Startup DNA podcast",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

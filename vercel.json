@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "installCommand": "echo skipped",
+  "buildCommand": "node build.js && mkdir -p dist && rm -rf dist/startupdna && cp -R startupdna dist/startupdna",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/", "destination": "/startupdna/", "permanent": false }
+  ]
+}

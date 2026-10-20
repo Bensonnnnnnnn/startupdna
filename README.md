@@ -4,6 +4,10 @@ A static website for the [Startup DNA](https://www.youtube.com/@yourStartupDNA) 
 
 No framework, no `node_modules`. HTML is generated from JSON. Hosting needs no build step.
 
+## Discord copy edits
+
+The show operator can change bios, taglines, and other JSON copy from Discord. Type `/edit-text`, paste a snippet of the current copy, edit the form, then **Publish**. Setup: [`agent/README.md`](agent/README.md).
+
 ## Preview locally
 
 ```bash
@@ -26,7 +30,9 @@ Show copy lives in [`data/site.json`](data/site.json) (tagline, manifesto, partn
 
 Drop the project folder onto [Netlify](https://www.netlify.com/drop/), [Cloudflare Pages](https://pages.cloudflare.com/), GitHub Pages, or any static host. Publish the repo root. The site is served at `/startupdna/`; `/` redirects there.
 
-If you prefer a build command anyway:
+**Vercel** runs `node build.js` on every deploy (`vercel.json`). It publishes a `dist/` folder that still contains `/startupdna/`, so existing URLs stay the same. No framework, no npm dependencies.
+
+On other hosts, if you want a build command:
 
 ```
 node build.js

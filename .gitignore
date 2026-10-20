@@ -1,5 +1,9 @@
 .DS_Store
 .env
 .env.*
+!.env.example
 *.log
 .cursor/
+dist
+agent/node_modules
+

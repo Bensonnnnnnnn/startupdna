@@ -1,0 +1,18 @@
+{
+  "name": "startupdna-discord-agent",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Discord bot that edits Startup DNA site copy and commits it to GitHub.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test src/edits.test.js src/search.test.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.22.1",
+    "octokit": "^5.0.3"
+  }
+}
